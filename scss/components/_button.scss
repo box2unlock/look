@@ -1,0 +1,27 @@
+.look-button
+{
+    display: inline-block;
+    background: $look-color-button-background;
+    color: $look-color-button;
+    font-weight: bold;
+    border: 0;
+    border-radius: $look-border-radius;
+    cursor: pointer;
+    @include rem(padding, $look-unit/2 $look-unit);
+    text-transform: uppercase;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    line-height: inherit;
+
+    &:hover
+    {
+        color: $look-color-button;
+        background: darken($look-color-button-background, 10%);
+    }
+
+    &.-wide
+    {
+        display: block;
+    }
+}

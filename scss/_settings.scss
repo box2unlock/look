@@ -1,0 +1,22 @@
+// look
+$look-font-path: '../components/font-awesome/fonts' !default;
+$look-font-family: Arial, sans-serif;
+$look-font-size: 14px;
+$look-font-size-h1: 34px;
+$look-font-size-h2: 30px;
+$look-font-size-h3: 26px;
+$look-font-size-h4: 22px;
+$look-font-size-h5: 18px;
+$look-font-size-h6: $look-font-size;
+
+$look-line-height: 1.4285714285;
+
+$look-unit: round($look-line-height * $look-font-size);
+
+$look-border-radius: 3px;
+
+// font awesome
+$fa-font-path: $look-font-path;
+
+// sass-rem
+$rem-fallback: true;

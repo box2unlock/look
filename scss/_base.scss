@@ -1,0 +1,116 @@
+body
+{
+    font-family: $look-font-family;
+    @include rem(font-size, $look-font-size);
+    line-height: $look-line-height;
+    color: $look-color-text;
+    background-color: $look-color-background;
+    @include rem(padding, $look-unit);
+}
+
+a
+{
+    text-decoration: none;
+    color: $look-color-link;
+    font-weight: bold;
+
+    &:hover
+    {
+        color: lighten($look-color-link, 10%);
+    }
+}
+
+h1, h2, h3, h4, h5, h6
+{
+    @include rem(letter-spacing, -2px);
+    color: $look-color-heading;
+}
+
+h1
+{
+    @include rem(font-size, $look-font-size-h1);
+    @include rem(margin-top, $look-unit);
+    @include rem(margin-bottom, $look-unit);
+    line-height: 2 * $look-unit / $look-font-size-h1;
+}
+
+h2
+{
+    @include rem(font-size, $look-font-size-h2);
+    @include rem(margin-top, $look-unit);
+    @include rem(margin-bottom, $look-unit);
+    line-height: 2 * $look-unit / $look-font-size-h2;
+}
+
+h3
+{
+    @include rem(font-size, $look-font-size-h3);
+    @include rem(margin-top, $look-unit);
+    @include rem(margin-bottom, $look-unit);
+    line-height: 2 * $look-unit / $look-font-size-h3;
+}
+
+h4
+{
+    @include rem(font-size, $look-font-size-h4);
+    @include rem(margin-top, $look-unit);
+    @include rem(margin-bottom, $look-unit);
+    line-height: $look-unit / $look-font-size-h4;
+}
+
+h5
+{
+    @include rem(font-size, $look-font-size-h5);
+    @include rem(margin-top, $look-unit);
+    @include rem(margin-bottom, $look-unit);
+    line-height: $look-unit / $look-font-size-h5;
+    @include rem(letter-spacing, -1.5px);
+}
+
+h6
+{
+    @include rem(font-size, $look-font-size-h6);
+    @include rem(margin-top, $look-unit);
+    @include rem(margin-bottom, $look-unit);
+    line-height: $look-unit / $look-font-size-h6;
+    @include rem(letter-spacing, -1px);
+}
+
+ul
+{
+    list-style-type: square;
+}
+
+ul, ol,
+p,
+pre
+{
+    @include rem(margin-top, $look-unit);
+    @include rem(margin-bottom, $look-unit);
+}
+
+li ol,
+li ul
+{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+pre
+{
+    color: $look-color-code;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+}
+
+code
+{
+    color: $look-color-code;
+    white-space: nowrap;
+    @include rem(padding, 2px 4px 1px 4px);
+    border-radius: $look-border-radius;
+    background: $look-color-code-background;
+}
