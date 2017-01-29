@@ -20,8 +20,39 @@
         background: darken($look-color-button-background, 10%);
     }
 
+    &.-empty
+    {
+        background: transparent;
+        color: $look-color-button-background;
+
+        &:hover
+        {
+            background: darken($look-color-background, 5%);
+            color: darken($look-color-button-background, 10%);
+        }
+    }
+
+    &.-small
+    {
+        @include rem(padding, $look-unit/4 $look-unit/2);
+    }
+
     &.-wide
     {
         display: block;
+    }
+
+    &.-icon
+    {
+        .fa
+        {
+            @include rem(margin-right, $look-unit);
+            color: darken($look-color-button-background, 20%);
+        }
+
+        &.-small .fa
+        {
+            @include rem(margin-right, $look-unit/2);
+        }
     }
 }
