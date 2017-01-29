@@ -7,6 +7,11 @@ Built primarily for my site [box2unlock.com](https://box2unlock.com/) but
 released publicly as it might be useful as a foundation for other projects out
 there. Short and simple.
 
+Demo
+----
+
+[https://cdn.rawgit.com/box2unlock/look/master/index.html](https://cdn.rawgit.com/box2unlock/look/master/index.html)
+
 Features
 ---------
 
