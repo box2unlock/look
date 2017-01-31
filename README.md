@@ -10,7 +10,7 @@ there. Short and simple.
 Demo
 ----
 
-[https://cdn.rawgit.com/box2unlock/look/master/index.html](https://cdn.rawgit.com/box2unlock/look/master/index.html)
+[https://rawgit.com/box2unlock/look/master/](https://rawgit.com/box2unlock/look/master/)
 
 Features
 ---------
