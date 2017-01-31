@@ -24,8 +24,14 @@ Features
 Compiling
 ---------
 
+Install [node-sass](https://github.com/sass/node-sass) (extremely fast Sass compiler).
+
 ```
-node-sass --source-map true --precision 10 --output-style compressed $FileName$ ../css/$FileNameWithoutExtension$.css
+node-sass
+--source-map true
+--precision 10
+--output-style compressed
+$FileName$ ../css/$FileNameWithoutExtension$.css
 ```
 
 where `$FileName$` is either `daylook.scss` or `nightlook.scss`.

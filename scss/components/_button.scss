@@ -56,3 +56,39 @@
         }
     }
 }
+
+$colors: 'Red' 'Pink' 'Purple' 'Indigo' 'Blue' 'Cyan' 'Teal' 'Green' 'Lime' 'Yellow' 'Amber' 'Orange' 'Brown' 'Grey' 'Black' 'White';
+
+@each $color in $colors
+{
+    $cl: to-lower-case(#{$color});
+
+    .look-button.-#{$cl}
+    {
+        background: palette(#{$color}, 500);
+        @if $color == 'White' {
+            color: palette(Black, 500);
+        }
+
+        .fa
+        {
+            @if $color == 'Black' {
+                color: palette(White, 500);
+            } @else if $color == 'White' {
+                color: palette(Black, 500);
+            } @else {
+                color: darken(palette(#{$color}, 500), 20%);
+            }
+        }
+
+        &:hover
+        {
+            @if $color == 'Black' {
+                background: lighten(palette(Black, 500), 20%);
+            } @else {
+                background: darken(palette(#{$color}, 500), 10%);
+            }
+        }
+    }
+
+}
