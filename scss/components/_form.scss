@@ -1,0 +1,68 @@
+.look-form
+{
+    @include rem(margin-top, $look-unit);
+    @include rem(margin-bottom, $look-unit);
+
+    &.-input,
+    &.-textarea
+    {
+        label
+        {
+            display: block;
+            font-weight: bold;
+        }
+
+        &.-error input,
+        &.-error textarea
+        {
+            border-color: $look-color-error;
+        }
+
+        input,
+        textarea
+        {
+            width: 100%;
+            display: block;
+            border-radius: $look-border-radius;
+            background: transparent;
+            @include rem(border, 1px solid $look-color-form-border);
+
+            &:focus
+            {
+                border-color: $look-color-form-focus;
+                outline: 0;
+            }
+        }
+    }
+
+    &.-input
+    {
+        input
+        {
+            @include rem(padding, 11px $look-unit/2);
+        }
+    }
+
+    &.-textarea
+    {
+        textarea
+        {
+            resize: vertical;
+            @include rem(padding, $look-unit/2);
+            height: 12 * $look-unit;
+        }
+    }
+
+    .hint
+    {
+        color: $look-color-form-hint;
+        @include rem(font-size, 12px);
+        line-height: $look-unit / 12px;
+    }
+
+    .error
+    {
+        color: $look-color-error;
+        font-weight: bold;
+    }
+}

@@ -96,6 +96,12 @@ li ul
     margin-bottom: 0;
 }
 
+pre,
+code
+{
+    font-family: Consolas;
+}
+
 pre
 {
     color: $look-color-code;
@@ -104,6 +110,9 @@ pre
     white-space: -pre-wrap;
     white-space: -o-pre-wrap;
     word-wrap: break-word;
+    background: $look-color-code-background;
+    border-radius: $look-border-radius;
+    padding: $look-unit;
 }
 
 code

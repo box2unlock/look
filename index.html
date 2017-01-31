@@ -13,12 +13,50 @@
         <p>Simple set of CSS rules & basic user-interface components.</p>
     </div>
 
-    <p class="_text-uppercase _text-center"><strong>Buttons</strong></p>
+    <p class="_text-uppercase _text-center" id="forms"><strong>Forms</strong></p>
+
+<pre>&lt;div class="look-form -input"&gt;
+    &lt;label for="field"&gt;Field label&lt;/label&gt;
+    &lt;input type="text" id="field" placeholder="Placeholder..."&gt;
+    &lt;div class="hint"&gt;Field hint&lt;/div&gt;
+&lt;/div&gt;</pre>
+
+    <div class="look-form -input">
+        <label for="field">Field label</label>
+        <input type="text" id="field" placeholder="Placeholder...">
+        <div class="hint">Field hint</div>
+    </div>
+
+<pre>&lt;div class="look-form -input -error"&gt;
+    &lt;label for="field-error"&gt;Field label&lt;/label&gt;
+    &lt;input type="text" id="field-error" placeholder="Placeholder..."&gt;
+    &lt;div class="error"&gt;Field error&lt;/div&gt;
+    &lt;div class="hint"&gt;Field hint&lt;/div&gt;
+&lt;/div&gt;</pre>
+
+    <div class="look-form -input -error">
+        <label for="field-error">Field label</label>
+        <input type="text" id="field-error" placeholder="Placeholder...">
+        <div class="error">Field error</div>
+        <div class="hint">Field hint</div>
+    </div>
+
+<pre>&lt;div class="look-form -textarea"&gt;
+    &lt;label for="some-textarea"&gt;Field label&lt;/label&gt;
+    &lt;textarea id="some-textarea"&gt;&lt;/textarea&gt;
+    &lt;div class="hint"&gt;Field hint&lt;/div&gt;
+&lt;/div&gt;</pre>
+
+    <div class="look-form -textarea">
+        <label for="some-textarea">Field label</label>
+        <textarea id="some-textarea"></textarea>
+        <div class="hint">Field hint</div>
+    </div>
+
+    <p class="_text-uppercase _text-center" id="buttons"><strong>Buttons</strong></p>
 
 <pre>&lt;a href="#" class="look-button"&gt;Default button&lt;/a&gt;
-&lt;a href="#" class="look-button -icon"&gt;&lt;i aria-hidden="true" class="fa fa-video-camera"&gt;&lt;/i&gt;Default button with icon&lt;/a&gt;
-&lt;a href="#" class="look-button -empty"&gt;Empty button&lt;/a&gt;
-&lt;a href="#" class="look-button -empty -icon"&gt;&lt;i aria-hidden="true" class="fa fa-video-camera"&gt;&lt;/i&gt;Empty button with icon&lt;/a&gt;</pre>
+&lt;a href="#" class="look-button -icon"&gt;&lt;i aria-hidden="true" class="fa fa-video-camera"&gt;&lt;/i&gt;Default button with icon&lt;/a&gt;</pre>
 
     <p>
         <a href="#" class="look-button">Default button</a>
@@ -47,12 +85,7 @@
         <a href="#" class="look-button -small -icon"><i aria-hidden="true" class="fa fa-video-camera"></i>Small button with icon</a>
     </p>
 
-    <!--<p>-->
-        <!--<a href="#" class="look-button">Standard button (a)</a>-->
-        <!--<button type="submit" class="look-button">Standard button (button)</button>-->
-    <!--</p>-->
-
-    <p class="_text-uppercase _text-center"><strong>Headings &amp; Paragraphs</strong></p>
+    <p class="_text-uppercase _text-center" id="text"><strong>Text</strong></p>
 
     <h1>Heading 1</h1>
 
@@ -134,7 +167,7 @@
         sagittis eget, enim. Maecenas tortor et malesuada ultricies.
     </p>
 
-    <p class="_text-uppercase _text-center"><strong>Icons (Font Awesome)</strong></p>
+    <p class="_text-uppercase _text-center" id="icons"><strong>Icons (Font Awesome)</strong></p>
 
     <ul>
         <li>Curabitur arcu erat nonummy ligula <i class="fa fa-file-code-o" aria-hidden="true"></i></li>
@@ -142,7 +175,7 @@
         <li>Pellentesque aliquam eget <i class="fa fa-window-maximize" aria-hidden="true"></i></li>
     </ul>
 
-    <p class="_text-uppercase _text-center"><strong>Lists</strong></p>
+    <p class="_text-uppercase _text-center" id="lists"><strong>Lists</strong></p>
 
     <p>
         Curabitur arcu erat, nonummy ligula. Nam pellentesque vel, varius nunc,
@@ -208,7 +241,7 @@
         </li>
     </ol>
 
-    <p class="_text-uppercase _text-center"><strong>Pre &amp; Code</strong></p>
+    <p class="_text-uppercase _text-center" id="pre-code"><strong>Pre &amp; Code</strong></p>
 
     <p>
         Integer <code>tincidunt</code> turpis egestas. Aenean mollis ultrices, velit nec
