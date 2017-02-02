@@ -1,2 +1,35 @@
 .look-segment
-{}
+{
+    border-radius: $look-border-radius;
+    border: 1px solid $look-color-segment-border;
+    @include rem(margin-top, $look-unit);
+    @include rem(margin-bottom, $look-unit);
+
+    > .header
+    {
+        background: $look-color-segment-background;
+        @include rem(padding, $look-unit/2 $look-unit);
+        box-shadow: inset 0 -1px 0 $look-color-segment-border;
+    }
+
+    > .footer
+    {
+        @include rem(padding, $look-unit/2 $look-unit);
+        box-shadow: inset 0 1px 0 $look-color-segment-border;
+    }
+
+    > .body
+    {
+        @include rem(padding, $look-unit - 1px $look-unit);
+
+        > *:first-child
+        {
+            margin-top: 0;
+        }
+
+        > *:last-child
+        {
+            margin-bottom: 0;
+        }
+    }
+}

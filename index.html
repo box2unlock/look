@@ -3,108 +3,123 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Look</title>
+    <title>Look | Simple set of CSS rules & basic user-interface components</title>
     <link rel="stylesheet" href="css/daylook.css" data-alt-href="css/nightlook.css">
 </head>
 <body>
 
     <div class="_text-center">
         <h1>Look</h1>
-        <p>Simple set of CSS rules & basic user-interface components.</p>
+        <p>
+            Simple set of CSS rules & basic user-interface components.<br>
+            <i class="fa fa-github-alt" aria-hidden="true"></i>&nbsp;<a href="https://github.com/box2unlock/look">https://github.com/box2unlock/look</a>
+        </p>
     </div>
+
+    <p class="_text-uppercase _text-center" id="segments"><strong>Segments</strong></p>
+
+<div class="js-code-sample">
+<div class="look-segment">
+    <div class="body">
+        <p>
+            <a href="#">Lorem ipsum</a> dolor sit amet sapien pede bibendum a, mauris. Lorem ipsum dolor nulla, auctor velit.
+        </p>
+    </div>
+</div>
+</div>
+
+<div class="js-code-sample">
+<div class="look-segment">
+    <div class="header">
+        <strong>Segment header</strong>
+    </div>
+    <div class="body">
+        <p>
+            <a href="#">Lorem ipsum</a> dolor sit amet sapien pede bibendum a, mauris. Lorem ipsum dolor nulla, auctor velit.
+        </p>
+    </div>
+    <div class="footer">
+        Segment footer
+    </div>
+</div>
+</div>
 
     <p class="_text-uppercase _text-center" id="forms"><strong>Forms</strong></p>
 
-<pre>&lt;div class="look-form -input"&gt;
-    &lt;label for="field"&gt;Field label&lt;/label&gt;
-    &lt;input type="text" id="field" placeholder="Placeholder..."&gt;
-    &lt;div class="hint"&gt;Field hint&lt;/div&gt;
-&lt;/div&gt;</pre>
+<div class="js-code-sample">
+<div class="look-form -input">
+    <label for="field">Field label</label>
+    <input type="text" id="field" placeholder="Placeholder...">
+    <div class="hint">Field hint</div>
+</div>
+</div>
 
-    <div class="look-form -input">
-        <label for="field">Field label</label>
-        <input type="text" id="field" placeholder="Placeholder...">
-        <div class="hint">Field hint</div>
-    </div>
+<div class="js-code-sample">
+<div class="look-form -input -error">
+    <label for="field-error">Field label</label>
+    <input type="text" id="field-error" placeholder="Placeholder...">
+    <div class="error">Field error</div>
+    <div class="hint">Field hint</div>
+</div>
+</div>
 
-<pre>&lt;div class="look-form -input -error"&gt;
-    &lt;label for="field-error"&gt;Field label&lt;/label&gt;
-    &lt;input type="text" id="field-error" placeholder="Placeholder..."&gt;
-    &lt;div class="error"&gt;Field error&lt;/div&gt;
-    &lt;div class="hint"&gt;Field hint&lt;/div&gt;
-&lt;/div&gt;</pre>
-
-    <div class="look-form -input -error">
-        <label for="field-error">Field label</label>
-        <input type="text" id="field-error" placeholder="Placeholder...">
-        <div class="error">Field error</div>
-        <div class="hint">Field hint</div>
-    </div>
-
-<pre>&lt;div class="look-form -textarea"&gt;
-    &lt;label for="some-textarea"&gt;Field label&lt;/label&gt;
-    &lt;textarea id="some-textarea"&gt;&lt;/textarea&gt;
-    &lt;div class="hint"&gt;Field hint&lt;/div&gt;
-&lt;/div&gt;</pre>
-
-    <div class="look-form -textarea">
-        <label for="some-textarea">Field label</label>
-        <textarea id="some-textarea"></textarea>
-        <div class="hint">Field hint</div>
-    </div>
+<div class="js-code-sample">
+<div class="look-form -textarea">
+    <label for="some-textarea">Field label</label>
+    <textarea id="some-textarea"></textarea>
+    <div class="hint">Field hint</div>
+</div>
+</div>
 
     <p class="_text-uppercase _text-center" id="buttons"><strong>Buttons</strong></p>
 
-<pre>&lt;a href="#" class="look-button"&gt;Default button&lt;/a&gt;
-&lt;a href="#" class="look-button -icon"&gt;&lt;i aria-hidden="true" class="fa fa-video-camera"&gt;&lt;/i&gt;Default button with icon&lt;/a&gt;</pre>
+<div class="js-code-sample">
+<p>
+    <a href="#" class="look-button">Default button</a>
+    <a href="#" class="look-button -icon"><i aria-hidden="true" class="fa fa-video-camera"></i>Default button with icon</a>
+</p>
+</div>
 
-    <p>
-        <a href="#" class="look-button">Default button</a>
-        <a href="#" class="look-button -icon"><i aria-hidden="true" class="fa fa-video-camera"></i>Default button with icon</a>
-    </p>
+<div class="js-code-sample">
+<p>
+    <a href="#" class="look-button -empty">Empty button</a>
+    <a href="#" class="look-button -empty -icon"><i aria-hidden="true" class="fa fa-video-camera"></i>Empty button with icon</a>
+</p>
+</div>
 
-<pre>&lt;a href="#" class="look-button -empty"&gt;Empty button&lt;/a&gt;
-&lt;a href="#" class="look-button -empty -icon"&gt;&lt;i aria-hidden="true" class="fa fa-video-camera"&gt;&lt;/i&gt;Empty button with icon&lt;/a&gt;</pre>
+<div class="js-code-sample">
+<p>
+    <a href="#" class="look-button -wide">Wide button</a>
+</p>
+</div>
 
-    <p>
-        <a href="#" class="look-button -empty">Empty button</a>
-        <a href="#" class="look-button -empty -icon"><i aria-hidden="true" class="fa fa-video-camera"></i>Empty button with icon</a>
-    </p>
+<div class="js-code-sample">
+<p>
+    <a href="#" class="look-button -small">Small button</a>
+    <a href="#" class="look-button -small -icon"><i aria-hidden="true" class="fa fa-video-camera"></i>Small button with icon</a>
+</p>
+</div>
 
-<pre>&lt;a href="#" class="look-button -wide"&gt;Wide button&lt;/a&gt;</pre>
-
-    <p>
-        <a href="#" class="look-button -wide">Wide button</a>
-    </p>
-
-<pre>&lt;a href="#" class="look-button -small"&gt;Small button&lt;/a&gt;
-&lt;a href="#" class="look-button -small -icon"&gt;&lt;i aria-hidden="true" class="fa fa-video-camera"&gt;&lt;/i&gt;Small button with icon&lt;/a&gt;</pre>
-
-    <p>
-        <a href="#" class="look-button -small">Small button</a>
-        <a href="#" class="look-button -small -icon"><i aria-hidden="true" class="fa fa-video-camera"></i>Small button with icon</a>
-    </p>
-
-<pre>&lt;a href="#" class="look-button -small -icon -red"&gt;&lt;i aria-hidden="true" class="fa fa-video-camera"&gt;&lt;/i&gt;Red&lt;/a&gt;&lt;!-- and other colors --&gt;</pre>
-
-    <p>
-        <a href="#" class="look-button -small -icon -red"><i aria-hidden="true" class="fa fa-video-camera"></i>Red</a><!-- and other colors -->
-        <a href="#" class="look-button -small -icon -pink"><i aria-hidden="true" class="fa fa-video-camera"></i>Pink</a>
-        <a href="#" class="look-button -small -icon -purple"><i aria-hidden="true" class="fa fa-video-camera"></i>Purple</a>
-        <a href="#" class="look-button -small -icon -indigo"><i aria-hidden="true" class="fa fa-video-camera"></i>Indigo</a>
-        <a href="#" class="look-button -small -icon -blue"><i aria-hidden="true" class="fa fa-video-camera"></i>Blue</a>
-        <a href="#" class="look-button -small -icon -cyan"><i aria-hidden="true" class="fa fa-video-camera"></i>Cyan</a>
-        <a href="#" class="look-button -small -icon -teal"><i aria-hidden="true" class="fa fa-video-camera"></i>Teal</a>
-        <a href="#" class="look-button -small -icon -green"><i aria-hidden="true" class="fa fa-video-camera"></i>Green</a>
-        <a href="#" class="look-button -small -icon -lime"><i aria-hidden="true" class="fa fa-video-camera"></i>Lime</a>
-        <a href="#" class="look-button -small -icon -yellow"><i aria-hidden="true" class="fa fa-video-camera"></i>Yellow</a>
-        <a href="#" class="look-button -small -icon -amber"><i aria-hidden="true" class="fa fa-video-camera"></i>Amber</a>
-        <a href="#" class="look-button -small -icon -orange"><i aria-hidden="true" class="fa fa-video-camera"></i>Orange</a>
-        <a href="#" class="look-button -small -icon -brown"><i aria-hidden="true" class="fa fa-video-camera"></i>Brown</a>
-        <a href="#" class="look-button -small -icon -grey"><i aria-hidden="true" class="fa fa-video-camera"></i>Grey</a>
-        <a href="#" class="look-button -small -icon -black"><i aria-hidden="true" class="fa fa-video-camera"></i>Black</a>
-        <a href="#" class="look-button -small -icon -white"><i aria-hidden="true" class="fa fa-video-camera"></i>White</a>
-    </p>
+<div class="js-code-sample">
+<p>
+    <a href="#" class="look-button -small -icon -red"><i aria-hidden="true" class="fa fa-video-camera"></i>Red</a>
+    <a href="#" class="look-button -small -icon -pink"><i aria-hidden="true" class="fa fa-video-camera"></i>Pink</a>
+    <a href="#" class="look-button -small -icon -purple"><i aria-hidden="true" class="fa fa-video-camera"></i>Purple</a>
+    <a href="#" class="look-button -small -icon -indigo"><i aria-hidden="true" class="fa fa-video-camera"></i>Indigo</a>
+    <a href="#" class="look-button -small -icon -blue"><i aria-hidden="true" class="fa fa-video-camera"></i>Blue</a>
+    <a href="#" class="look-button -small -icon -cyan"><i aria-hidden="true" class="fa fa-video-camera"></i>Cyan</a>
+    <a href="#" class="look-button -small -icon -teal"><i aria-hidden="true" class="fa fa-video-camera"></i>Teal</a>
+    <a href="#" class="look-button -small -icon -green"><i aria-hidden="true" class="fa fa-video-camera"></i>Green</a>
+    <a href="#" class="look-button -small -icon -lime"><i aria-hidden="true" class="fa fa-video-camera"></i>Lime</a>
+    <a href="#" class="look-button -small -icon -yellow"><i aria-hidden="true" class="fa fa-video-camera"></i>Yellow</a>
+    <a href="#" class="look-button -small -icon -amber"><i aria-hidden="true" class="fa fa-video-camera"></i>Amber</a>
+    <a href="#" class="look-button -small -icon -orange"><i aria-hidden="true" class="fa fa-video-camera"></i>Orange</a>
+    <a href="#" class="look-button -small -icon -brown"><i aria-hidden="true" class="fa fa-video-camera"></i>Brown</a>
+    <a href="#" class="look-button -small -icon -grey"><i aria-hidden="true" class="fa fa-video-camera"></i>Grey</a>
+    <a href="#" class="look-button -small -icon -black"><i aria-hidden="true" class="fa fa-video-camera"></i>Black</a>
+    <a href="#" class="look-button -small -icon -white"><i aria-hidden="true" class="fa fa-video-camera"></i>White</a>
+</p>
+</div>
 
     <p class="_text-uppercase _text-center" id="text"><strong>Text</strong></p>
 
@@ -285,6 +300,20 @@
     <script>
         $.horizontalGrid();
         $('link[rel="stylesheet"]').stylesheetSwitch();
+        $('.js-code-sample').each(function () {
+            var p = $('<p></p>');
+            var link = $('<a href="#">Toggle code</a>');
+            link.click(function () {
+                $(this).closest('.js-code-sample').find('pre').toggle();
+                return false;
+            });
+            p.append(link);
+            var code = $('<div />').text($(this).html()).html();
+            var pre = $('<pre style="display:none">' + $.trim(code) + '</pre>');
+            $(this).prepend(pre);
+            $(this).prepend(p);
+        });
     </script>
+
 </body>
 </html>
