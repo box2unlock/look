@@ -5,7 +5,7 @@
         var self = this;
 
         self.each(function () {
-            var button = $('<a href="#" class="look-button -white -icon"><i class="fa fa-file-code-o" aria-hidden="true"></i><span>Toggle code</span></a>');
+            var button = $('<a href="#" class="look-button -black -icon"><i class="fa fa-file-code-o" aria-hidden="true"></i><span>Toggle code</span></a>');
             button.click(function () {
                 $(this).closest(self).find('pre').toggle();
                 return false;
