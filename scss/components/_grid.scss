@@ -1,0 +1,27 @@
+/*!
+ * This is basically slightly modified ungrid framework:
+ * https://github.com/chrisnager/ungrid
+ */
+
+@media (min-width: $look-responsive-breakpoint)
+{
+    .look-row
+    {
+        width: 100%;
+        display: table;
+        table-layout: fixed;
+    }
+
+    .look-row .col
+    {
+        display: table-cell;
+    }
+}
+
+@media (max-width: $look-responsive-breakpoint - 1px)
+{
+    .look-row .col
+    {
+        width: 100% !important;
+    }
+}

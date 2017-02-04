@@ -42,3 +42,18 @@
 {
     margin: 0 !important;
 }
+
+._margin-default
+{
+    margin: $look-unit !important;
+}
+
+._padding-reset
+{
+    padding: 0 !important;
+}
+
+._padding-default
+{
+    padding: $look-unit !important;
+}

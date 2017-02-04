@@ -13,3 +13,5 @@ $look-color-form-hint: palette(Grey, 600);
 $look-color-form-focus: $look-color-link;
 $look-color-segment-border: $look-color-form-border;
 $look-color-segment-background: $look-color-code-background;
+$look-color-fieldset-border: palette(Grey, 400);
+$look-color-fieldset: darken($look-color-fieldset-border, 20%);

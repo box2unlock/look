@@ -1,11 +1,11 @@
 Look
 ====
 
-Simple set of CSS rules & basic user-interface components.
+Minimalistic CSS framework.
 
-Built primarily for my site [box2unlock.com](https://box2unlock.com/) but
-released publicly as it might be useful as a foundation for other projects out
-there. Short and simple.
+A set of CSS rules & basic user-interface components. Built primarily for my 
+site [box2unlock.com](https://box2unlock.com/) but released publicly as it might 
+be useful as a foundation for other projects out there. Plain and simple.
 
 Demo
 ----
@@ -13,18 +13,21 @@ Demo
 [https://rawgit.com/box2unlock/look/master/](https://rawgit.com/box2unlock/look/master/)
 
 Features
----------
+--------
 
+- uses `rem` sizing with `px` fallback
+- available in two color variants: `day` and `night`
+- follows vertical rhythm
+- follows [RSCSS](http://rscss.io/) methodology
 - includes [Normalize](https://necolas.github.io/normalize.css/)
 - includes [Font Awesome](http://fontawesome.io/)
-- follows vertical rhythm
-- uses `rem` sizing with `px` fallback
-- two color variants: `day` and `night`
+- includes [ungrid](http://chrisnager.github.io/ungrid/)
 
 Compiling
 ---------
 
-Install [node-sass](https://github.com/sass/node-sass) (extremely fast Sass compiler).
+Install [node-sass](https://github.com/sass/node-sass) (extremely 
+fast [Sass](http://sass-lang.com/) compiler).
 
 ```
 node-sass

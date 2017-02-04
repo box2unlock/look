@@ -5,7 +5,6 @@ body
     line-height: $look-line-height;
     color: $look-color-text;
     background-color: $look-color-background;
-    @include rem(padding, $look-unit);
 }
 
 a
@@ -94,6 +93,16 @@ li ul
 {
     margin-top: 0;
     margin-bottom: 0;
+}
+
+ul > li
+{
+    list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAGCAYAAADkOT91AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAB9JREFUeNpiZJi+/D8DEmBiQAOEBRj///+PXwVAgAEAP4YFRZMhCHAAAAAASUVORK5CYII);
+}
+
+ol > li
+{
+    list-style-image: none;
 }
 
 pre,

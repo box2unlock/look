@@ -3,103 +3,130 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Look | Simple set of CSS rules & basic user-interface components</title>
+    <link rel="icon" href="https://box2unlock.com/favicon.ico">
+    <title>Look | Minimalistic CSS framework</title>
     <link rel="stylesheet" href="css/daylook.css" data-alt-href="css/nightlook.css">
 </head>
 <body>
 
-    <div class="_text-center">
-        <h1>Look</h1>
-        <p>
-            Simple set of CSS rules & basic user-interface components.<br>
-            <i class="fa fa-github-alt" aria-hidden="true"></i>&nbsp;<a href="https://github.com/box2unlock/look">https://github.com/box2unlock/look</a>
-        </p>
-    </div>
+    <div class="look-row">
+        <div class="col _padding-default" style="width: 75%">
 
-    <p class="_text-uppercase _text-center" id="segments"><strong>Segments</strong></p>
+            <div class="_text-center">
+                <h1>Look</h1>
+                <p>
+                    Minimalistic CSS framework<br>
+                    <i class="fa fa-github-alt" aria-hidden="true"></i>&nbsp;<a href="https://github.com/box2unlock/look">https://github.com/box2unlock/look</a>
+                </p>
+            </div>
 
+            <div class="look-fieldset js-heading">
+                <div class="legend"><span>Body copy</span></div>
+                <p>
+                    <a href="#">Lorem ipsum</a> dolor sit amet sapien pede bibendum a, mauris. Lorem ipsum
+                    dolor nulla, auctor velit. Mauris nunc ac turpis faucibus vestibulum.
+                    Etiam tempor pede ac ornare eu, luctus et lorem. Cras dignissim. Morbi
+                    sodales wisi a lacus. Maecenas blandit risus dolor fermentum odio.
+                    Morbi accumsan, dolor id eros. Suspendisse diam. Suspendisse vitae
+                    sagittis eget, enim. Maecenas tortor et malesuada ultricies.
+                </p>
+            </div>
+
+            <div class="look-fieldset js-heading">
+                <div class="legend"><span>Headings</span></div>
+                <h1>Heading 1</h1>
+                <h2>Heading 2</h2>
+                <h3>Heading 3</h3>
+                <h4>Heading 4</h4>
+                <h5>Heading 5</h5>
+                <h6>Heading 6</h6>
+            </div>
+
+            <div class="look-fieldset js-heading">
+                <div class="legend"><span>Lists</span></div>
+                <p>Unordered:</p>
+                <ul>
+                    <li>Orange</li>
+                    <li>Apple</li>
+                    <li>Appricot</li>
+                    <li>Lorem ipsum dolor sit amet sapien pede bibendum a, mauris. Lorem ipsum dolor nulla, auctor velit. Mauris nunc ac turpis faucibus vestibulum. Etiam tempor pede ac ornare eu, luctus et lorem. Cras dignissim. Morbi sodales wisi a lacus. Maecenas blandit risus dolor fermentum odio. Morbi accumsan, dolor id eros. Suspendisse diam. Suspendisse vitae sagittis eget, enim. Maecenas tortor et malesuada ultricies.</li>
+                </ul>
+                <p>Ordered:</p>
+                <ol>
+                    <li>First</li>
+                    <li>Second</li>
+                    <li>Third</li>
+                </ol>
+                <p>Nested:</p>
+                <ul>
+                    <li>
+                        Orange
+                        <ol>
+                            <li>First</li>
+                            <li>Second</li>
+                            <li>Third</li>
+                        </ol>
+                    </li>
+                    <li>Apple</li>
+                    <li>Appricot</li>
+                </ul>
+            </div>
+
+            <div class="look-fieldset js-heading">
+                <div class="legend"><span>PRE & CODE</span></div>
+                <p>
+                    Integer <code>tincidunt</code> turpis egestas. Aenean mollis ultrices, velit nec
+                    sapien eros, varius felis neque, vitae lorem odio non sem. Quisque in
+                    neque odio eu.
+                </p>
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;link rel="stylesheet" href="css/daylook.css"&gt;
+    &lt;/head&gt;
+&lt;/html&gt;
+</pre>
+            </div>
+
+            <div class="look-fieldset js-heading">
+                <div class="legend"><span>Icons</span></div>
 <div class="js-code-sample">
-<div class="look-segment">
-    <div class="body">
-        <p>
-            <a href="#">Lorem ipsum</a> dolor sit amet sapien pede bibendum a, mauris. Lorem ipsum dolor nulla, auctor velit.
-        </p>
-    </div>
+<h3>
+    <a href="http://fontawesome.io/">Font Awesome</a> icon font is already included:
+    <i class="fa fa-facebook-square" aria-hidden="true"></i>
+    <i class="fa fa-dropbox" aria-hidden="true"></i>
+    <i class="fa fa-twitter" aria-hidden="true"></i>
+    <i class="fa fa-instagram" aria-hidden="true"></i>
+</h3>
 </div>
-</div>
+            </div>
 
-<div class="js-code-sample">
-<div class="look-segment">
-    <div class="header">
-        <strong>Segment header</strong>
-    </div>
-    <div class="body">
-        <p>
-            <a href="#">Lorem ipsum</a> dolor sit amet sapien pede bibendum a, mauris. Lorem ipsum dolor nulla, auctor velit.
-        </p>
-    </div>
-    <div class="footer">
-        Segment footer
-    </div>
-</div>
-</div>
-
-    <p class="_text-uppercase _text-center" id="forms"><strong>Forms</strong></p>
-
-<div class="js-code-sample">
-<div class="look-form -input">
-    <label for="field">Field label</label>
-    <input type="text" id="field" placeholder="Placeholder...">
-    <div class="hint">Field hint</div>
-</div>
-</div>
-
-<div class="js-code-sample">
-<div class="look-form -input -error">
-    <label for="field-error">Field label</label>
-    <input type="text" id="field-error" placeholder="Placeholder...">
-    <div class="error">Field error</div>
-    <div class="hint">Field hint</div>
-</div>
-</div>
-
-<div class="js-code-sample">
-<div class="look-form -textarea">
-    <label for="some-textarea">Field label</label>
-    <textarea id="some-textarea"></textarea>
-    <div class="hint">Field hint</div>
-</div>
-</div>
-
-    <p class="_text-uppercase _text-center" id="buttons"><strong>Buttons</strong></p>
-
+            <div class="look-fieldset js-heading">
+                <div class="legend"><span>Buttons</span></div>
 <div class="js-code-sample">
 <p>
     <a href="#" class="look-button">Default button</a>
     <a href="#" class="look-button -icon"><i aria-hidden="true" class="fa fa-video-camera"></i>Default button with icon</a>
 </p>
 </div>
-
 <div class="js-code-sample">
 <p>
     <a href="#" class="look-button -empty">Empty button</a>
     <a href="#" class="look-button -empty -icon"><i aria-hidden="true" class="fa fa-video-camera"></i>Empty button with icon</a>
 </p>
 </div>
-
 <div class="js-code-sample">
 <p>
     <a href="#" class="look-button -wide">Wide button</a>
 </p>
 </div>
-
 <div class="js-code-sample">
 <p>
     <a href="#" class="look-button -small">Small button</a>
     <a href="#" class="look-button -small -icon"><i aria-hidden="true" class="fa fa-video-camera"></i>Small button with icon</a>
 </p>
 </div>
-
 <div class="js-code-sample">
 <p>
     <a href="#" class="look-button -small -icon -red"><i aria-hidden="true" class="fa fa-video-camera"></i>Red</a>
@@ -120,11 +147,59 @@
     <a href="#" class="look-button -small -icon -white"><i aria-hidden="true" class="fa fa-video-camera"></i>White</a>
 </p>
 </div>
+            </div>
 
-    <p class="_text-uppercase _text-center" id="text"><strong>Text</strong></p>
+            <div class="look-fieldset js-heading">
+                <div class="legend"><span>Forms</span></div>
+<div class="js-code-sample">
+<div class="look-form -input">
+    <label for="field">Field label</label>
+    <input type="text" id="field" placeholder="Placeholder...">
+    <div class="hint">Field hint</div>
+</div>
+</div>
+<div class="js-code-sample">
+<div class="look-form -input -error">
+    <label for="field-error">Field label</label>
+    <input type="text" id="field-error" placeholder="Placeholder...">
+    <div class="error">Field error</div>
+    <div class="hint">Field hint</div>
+</div>
+</div>
+<div class="js-code-sample">
+<div class="look-form -textarea">
+    <label for="some-textarea">Field label</label>
+    <textarea id="some-textarea"></textarea>
+    <div class="hint">Field hint</div>
+</div>
+</div>
+            </div>
 
-    <h1>Heading 1</h1>
-
+            <div class="look-fieldset js-heading">
+                <div class="legend"><span>Fieldsets</span></div>
+                <p>Use <code>.look-fieldset</code> to group related form fields together:</p>
+<div class="js-code-sample">
+<fieldset class="look-fieldset">
+    <legend class="legend"><span>Log in</span></legend>
+    <div class="look-form -input">
+        <label for="username">Username</label>
+        <input type="text" id="username" placeholder="Username...">
+        <div class="hint">Username hint</div>
+    </div>
+    <div class="look-form -input">
+        <label for="password">Password</label>
+        <input type="text" id="password" placeholder="Password...">
+        <div class="hint">Password hint</div>
+    </div>
+    <div class="look-form">
+        <button type="submit" class="look-button -wide">Log in</button>
+    </div>
+</fieldset>
+</div>
+                <p><code>.look-fieldset</code> can be used also without <code>fieldset</code> tag:</p>
+<div class="js-code-sample">
+<div class="look-fieldset">
+    <div class="legend"><span>Test</span></div>
     <p>
         <a href="#">Lorem ipsum</a> dolor sit amet sapien pede bibendum a, mauris. Lorem ipsum
         dolor nulla, auctor velit. Mauris nunc ac turpis faucibus vestibulum.
@@ -133,185 +208,59 @@
         Morbi accumsan, dolor id eros. Suspendisse diam. Suspendisse vitae
         sagittis eget, enim. Maecenas tortor et malesuada ultricies.
     </p>
-    <p>
-        Curabitur arcu erat, nonummy ligula. Nam pellentesque vel, varius nunc,
-        in elit. Pellentesque aliquam eget, neque. Class aptent taciti sociosqu
-        ad litora torquent per inceptos hymenaeos. Phasellus blandit, quam.
-        Aliquam interdum vitae, vulputate wisi nibh consectetuer ac, sodales
-        eros. Quisque iaculis, purus et magnis dis parturient montes, nascetur
-        ridiculus mus. Donec pharetra volutpat. Nullam rutrum id, adipiscing
-        elit arcu, eget dolor tellus porttitor interdum. Quisque ultricies
-        iaculis massa. Proin id risus. Aliquam eleifend, ligula. Curabitur nec
-        elit nibh, pretium bibendum quis, convallis aliquam cursus vitae, cursus
-        ut, accumsan nisl a velit nec leo semper convallis. Integer tincidunt
-        turpis egestas. Aenean mollis ultrices, velit nec sapien eros, varius
-        felis neque, vitae lorem odio non sem. Quisque in neque odio eu.
-    </p>
+</div>
+</div>
+            </div>
 
-    <h2>Heading 2</h2>
+            <div class="look-fieldset js-heading">
+                <div class="legend"><span>Segments</span></div>
+<div class="js-code-sample">
+<div class="look-segment">
+    <div class="body">
+        <p>
+            <a href="#">Lorem ipsum</a> dolor sit amet sapien pede bibendum a, mauris.
+        </p>
+    </div>
+</div>
+</div>
+<div class="js-code-sample">
+<div class="look-segment">
+    <div class="header">
+        <strong>Segment header</strong>
+    </div>
+    <div class="body">
+        <p>
+            <a href="#">Lorem ipsum</a> dolor sit amet sapien pede bibendum a, mauris.
+        </p>
+    </div>
+    <div class="footer">
+        Segment footer
+    </div>
+</div>
+</div>
+            </div>
 
-    <p>
-        Lorem ipsum dolor sit amet sapien pede bibendum a, mauris. Lorem ipsum
-        dolor nulla, auctor velit. Mauris nunc ac turpis faucibus vestibulum.
-        Etiam tempor pede ac ornare eu, luctus et lorem. Cras dignissim. Morbi
-        sodales wisi a lacus. Maecenas blandit risus dolor fermentum odio.
-        Morbi accumsan, dolor id eros. Suspendisse diam. Suspendisse vitae
-        sagittis eget, enim. Maecenas tortor et malesuada ultricies.
-    </p>
+        </div>
+        <div class="col _padding-default" style="width: 25%">
 
-    <h3>Heading 3</h3>
+            <h2>Table of contents</h2>
+            <div id="toc"></div>
 
-    <p>
-        Lorem ipsum dolor sit amet sapien pede bibendum a, mauris. Lorem ipsum
-        dolor nulla, auctor velit. Mauris nunc ac turpis faucibus vestibulum.
-        Etiam tempor pede ac ornare eu, luctus et lorem. Cras dignissim. Morbi
-        sodales wisi a lacus. Maecenas blandit risus dolor fermentum odio.
-        Morbi accumsan, dolor id eros. Suspendisse diam. Suspendisse vitae
-        sagittis eget, enim. Maecenas tortor et malesuada ultricies.
-    </p>
+        </div>
+    </div>
 
-    <h4>Heading 4</h4>
-
-    <p>
-        Lorem ipsum dolor sit amet sapien pede bibendum a, mauris. Lorem ipsum
-        dolor nulla, auctor velit. Mauris nunc ac turpis faucibus vestibulum.
-        Etiam tempor pede ac ornare eu, luctus et lorem. Cras dignissim. Morbi
-        sodales wisi a lacus. Maecenas blandit risus dolor fermentum odio.
-        Morbi accumsan, dolor id eros. Suspendisse diam. Suspendisse vitae
-        sagittis eget, enim. Maecenas tortor et malesuada ultricies.
-    </p>
-
-    <h5>Heading 5</h5>
-
-    <p>
-        Lorem ipsum dolor sit amet sapien pede bibendum a, mauris. Lorem ipsum
-        dolor nulla, auctor velit. Mauris nunc ac turpis faucibus vestibulum.
-        Etiam tempor pede ac ornare eu, luctus et lorem. Cras dignissim. Morbi
-        sodales wisi a lacus. Maecenas blandit risus dolor fermentum odio.
-        Morbi accumsan, dolor id eros. Suspendisse diam. Suspendisse vitae
-        sagittis eget, enim. Maecenas tortor et malesuada ultricies.
-    </p>
-
-    <h6>Heading 6</h6>
-
-    <p>
-        Lorem ipsum dolor sit amet sapien pede bibendum a, mauris. Lorem ipsum
-        dolor nulla, auctor velit. Mauris nunc ac turpis faucibus vestibulum.
-        Etiam tempor pede ac ornare eu, luctus et lorem. Cras dignissim. Morbi
-        sodales wisi a lacus. Maecenas blandit risus dolor fermentum odio.
-        Morbi accumsan, dolor id eros. Suspendisse diam. Suspendisse vitae
-        sagittis eget, enim. Maecenas tortor et malesuada ultricies.
-    </p>
-
-    <p class="_text-uppercase _text-center" id="icons"><strong>Icons (Font Awesome)</strong></p>
-
-    <ul>
-        <li>Curabitur arcu erat nonummy ligula <i class="fa fa-file-code-o" aria-hidden="true"></i></li>
-        <li>Nam pellentesque vel varius nunc <i class="fa fa-address-book-o" aria-hidden="true"></i></li>
-        <li>Pellentesque aliquam eget <i class="fa fa-window-maximize" aria-hidden="true"></i></li>
-    </ul>
-
-    <p class="_text-uppercase _text-center" id="lists"><strong>Lists</strong></p>
-
-    <p>
-        Curabitur arcu erat, nonummy ligula. Nam pellentesque vel, varius nunc,
-        in elit.
-    </p>
-
-    <ul>
-        <li>
-            Integer tincidunt turpis egestas. Aenean mollis ultrices, velit nec
-            sapien eros, varius felis neque, vitae lorem odio non sem. Quisque in
-            neque odio eu.
-            <ol>
-                <li>
-                    Integer tincidunt turpis egestas. Aenean mollis ultrices, velit nec
-                    sapien eros, varius felis neque, vitae lorem odio non sem. Quisque in
-                    neque odio eu.
-                </li>
-                <li>
-                    Integer tincidunt turpis egestas. Aenean mollis ultrices, velit nec
-                    sapien eros, varius felis neque, vitae lorem odio non sem. Quisque in
-                    neque odio eu.
-                </li>
-                <li>
-                    Integer tincidunt turpis egestas. Aenean mollis ultrices, velit nec
-                    sapien eros, varius felis neque, vitae lorem odio non sem. Quisque in
-                    neque odio eu.
-                </li>
-            </ol>
-        </li>
-        <li>
-            Integer tincidunt turpis egestas. Aenean mollis ultrices, velit nec
-            sapien eros, varius felis neque, vitae lorem odio non sem. Quisque in
-            neque odio eu.
-        </li>
-        <li>
-            Integer tincidunt turpis egestas. Aenean mollis ultrices, velit nec
-            sapien eros, varius felis neque, vitae lorem odio non sem. Quisque in
-            neque odio eu.
-        </li>
-    </ul>
-
-    <p>
-        Integer tincidunt turpis egestas. Aenean mollis ultrices, velit nec
-        sapien eros, varius felis neque, vitae lorem odio non sem. Quisque in
-        neque odio eu.
-    </p>
-
-    <ol>
-        <li>
-            Integer tincidunt turpis egestas. Aenean mollis ultrices, velit nec
-            sapien eros, varius felis neque, vitae lorem odio non sem. Quisque in
-            neque odio eu.
-        </li>
-        <li>
-            Integer tincidunt turpis egestas. Aenean mollis ultrices, velit nec
-            sapien eros, varius felis neque, vitae lorem odio non sem. Quisque in
-            neque odio eu.
-        </li>
-        <li>
-            Integer tincidunt turpis egestas. Aenean mollis ultrices, velit nec
-            sapien eros, varius felis neque, vitae lorem odio non sem. Quisque in
-            neque odio eu.
-        </li>
-    </ol>
-
-    <p class="_text-uppercase _text-center" id="pre-code"><strong>Pre &amp; Code</strong></p>
-
-    <p>
-        Integer <code>tincidunt</code> turpis egestas. Aenean mollis ultrices, velit nec
-        sapien eros, varius felis neque, vitae lorem odio non sem. Quisque in
-        neque odio eu.
-    </p>
-
-<pre>
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-    &lt;head&gt;
-        &lt;link rel="stylesheet" href="css/daylook.css"/&gt;
-    &lt;/head&gt;
-&lt;/html&gt;
-</pre>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/jquery.horizontalGrid.js"></script>
     <script src="js/jquery.stylesheetSwitch.js"></script>
+    <script src="js/jquery.codeSample.js"></script>
+    <script src="js/jquery.toc.js"></script>
     <script>
         $.horizontalGrid();
         $('link[rel="stylesheet"]').stylesheetSwitch();
-        $('.js-code-sample').each(function () {
-            var p = $('<p></p>');
-            var link = $('<a href="#">Toggle code</a>');
-            link.click(function () {
-                $(this).closest('.js-code-sample').find('pre').toggle();
-                return false;
-            });
-            p.append(link);
-            var code = $('<div />').text($(this).html()).html();
-            var pre = $('<pre style="display:none">' + $.trim(code) + '</pre>');
-            $(this).prepend(pre);
-            $(this).prepend(p);
+        $('.js-code-sample').codeSample();
+        $('.js-heading').toc({
+            container: '#toc'
         });
     </script>
 
