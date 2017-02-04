@@ -4,6 +4,7 @@
     border: 1px solid $look-color-segment-border;
     @include rem(margin-top, $look-unit);
     @include rem(margin-bottom, $look-unit);
+    overflow: hidden; // fixes border radius in chrome
 
     > .header
     {
