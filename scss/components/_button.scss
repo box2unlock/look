@@ -47,13 +47,23 @@
     {
         .fa
         {
-            @include rem(margin-right, $look-unit);
+            @include rem(margin, 0 $look-unit);
             color: darken($look-color-button-background, 20%);
         }
 
         &.-small .fa
         {
-            @include rem(margin-right, $look-unit/2);
+            @include rem(margin, 0 $look-unit/2);
+        }
+
+        .fa:first-child
+        {
+            margin-left: 0;
+        }
+
+        .fa:last-child
+        {
+            margin-right: 0;
         }
     }
 }
