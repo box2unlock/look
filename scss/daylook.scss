@@ -1,15 +1,17 @@
 /*!
- * Look | Simple set of CSS rules & basic user-interface components
+ * Look | Minimalistic CSS framework
  */
 
 @import 'settings';
 @import 'tools';
-@import "colors/day";
+@import 'colors/day';
 @import 'generic';
 @import 'base';
-@import "components/grid";
-@import "components/form";
-@import "components/fieldset";
-@import "components/button";
-@import "components/segment";
+@import 'components/grid';
+@import 'components/form';
+@import 'components/fieldset';
+@import 'components/button';
+@import 'components/segment';
+@import 'components/balloon';
+@import 'components/comment';
 @import 'utilities';

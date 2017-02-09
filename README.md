@@ -32,7 +32,7 @@ fast [Sass](http://sass-lang.com/) compiler).
 ```
 node-sass
 --source-map true
---precision 10
+--precision 2
 --output-style compressed
 $FileName$ ../css/$FileNameWithoutExtension$.css
 ```

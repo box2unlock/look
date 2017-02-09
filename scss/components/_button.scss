@@ -5,7 +5,7 @@
     color: $look-color-button;
     font-weight: bold;
     border: 0;
-    border-radius: $look-border-radius;
+    @include rem(border-radius, $look-border-radius);
     cursor: pointer;
     @include rem(padding, $look-unit/2 $look-unit);
     text-transform: uppercase;

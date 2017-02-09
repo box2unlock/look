@@ -23,7 +23,7 @@
         {
             width: 100%;
             display: block;
-            border-radius: $look-border-radius;
+            @include rem(border-radius, $look-border-radius);
             background: transparent;
             @include rem(border, 1px solid $look-color-form-border);
 

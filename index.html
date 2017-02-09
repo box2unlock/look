@@ -5,80 +5,114 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" href="https://box2unlock.com/favicon.ico">
     <title>Look | Minimalistic CSS framework</title>
-    <link rel="stylesheet" href="css/daylook.css" data-alt-href="css/nightlook.css">
+    <link rel="stylesheet" href="css/daylook.css" data-stylesheet-switch="css/nightlook.css">
+    <style>
+        body
+        {
+            padding-top: 6rem;
+        }
+
+        section
+        {
+            padding: 2rem 0;
+        }
+
+        .demo-sticky-header
+        {
+            padding: 1rem;
+            background: #fff;
+            box-shadow: inset 0 -1px 0 #ccc;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 9999;
+        }
+
+        .-stylesheet-switched .demo-sticky-header
+         {
+            background: #212121;
+            box-shadow: inset 0 -1px 0 #333;
+         }
+    </style>
 </head>
 <body>
 
-    <div class="look-row">
-        <div class="col _padding-default" style="width: 75%">
+<div class="demo-sticky-header">
+    <div id="stylesheet-switch" class="_float-right"></div>
+    <div id="horizontal-grid"></div>
+</div>
 
-            <div class="_text-center">
-                <h1>Look</h1>
-                <p>
-                    Minimalistic CSS framework<br>
-                    <i class="fa fa-github-alt" aria-hidden="true"></i>&nbsp;<a href="https://github.com/box2unlock/look">https://github.com/box2unlock/look</a>
-                </p>
-            </div>
+<div class="look-row">
+    <div class="col _padding-default" style="width: 75%">
 
-            <div class="look-fieldset js-heading">
-                <div class="legend"><span>Body copy</span></div>
-                <p>
-                    <a href="#">Lorem ipsum</a> dolor sit amet sapien pede bibendum a, mauris. Lorem ipsum
-                    dolor nulla, auctor velit. Mauris nunc ac turpis faucibus vestibulum.
-                    Etiam tempor pede ac ornare eu, luctus et lorem. Cras dignissim. Morbi
-                    sodales wisi a lacus. Maecenas blandit risus dolor fermentum odio.
-                    Morbi accumsan, dolor id eros. Suspendisse diam. Suspendisse vitae
-                    sagittis eget, enim. Maecenas tortor et malesuada ultricies.
-                </p>
-            </div>
+        <div class="_text-center">
+            <h1>Look</h1>
+            <p>
+                Minimalistic CSS framework<br>
+                <i class="fa fa-github-alt" aria-hidden="true"></i>&nbsp;<a href="https://github.com/box2unlock/look">https://github.com/box2unlock/look</a>
+            </p>
+        </div>
 
-            <div class="look-fieldset js-heading">
-                <div class="legend"><span>Headings</span></div>
-                <h1>Heading 1</h1>
-                <h2>Heading 2</h2>
-                <h3>Heading 3</h3>
-                <h4>Heading 4</h4>
-                <h5>Heading 5</h5>
-                <h6>Heading 6</h6>
-            </div>
+        <section class="js-table-of-contents">
+            <h2 class="js-table-of-contents-item">Body copy</h2>
+            <p>
+                <a href="#">Lorem ipsum</a> dolor sit amet sapien pede bibendum a, mauris. Lorem ipsum
+                dolor nulla, auctor velit. Mauris nunc ac turpis faucibus vestibulum.
+                Etiam tempor pede ac ornare eu, luctus et lorem. Cras dignissim. Morbi
+                sodales wisi a lacus. Maecenas blandit risus dolor fermentum odio.
+                Morbi accumsan, dolor id eros. Suspendisse diam. Suspendisse vitae
+                sagittis eget, enim. Maecenas tortor et malesuada ultricies.
+            </p>
+        </section>
 
-            <div class="look-fieldset js-heading">
-                <div class="legend"><span>Lists</span></div>
-                <p>Unordered:</p>
-                <ul>
-                    <li>Orange</li>
-                    <li>Apple</li>
-                    <li>Appricot</li>
-                    <li>Lorem ipsum dolor sit amet sapien pede bibendum a, mauris. Lorem ipsum dolor nulla, auctor velit. Mauris nunc ac turpis faucibus vestibulum. Etiam tempor pede ac ornare eu, luctus et lorem. Cras dignissim. Morbi sodales wisi a lacus. Maecenas blandit risus dolor fermentum odio. Morbi accumsan, dolor id eros. Suspendisse diam. Suspendisse vitae sagittis eget, enim. Maecenas tortor et malesuada ultricies.</li>
-                </ul>
-                <p>Ordered:</p>
-                <ol>
-                    <li>First</li>
-                    <li>Second</li>
-                    <li>Third</li>
-                </ol>
-                <p>Nested:</p>
-                <ul>
-                    <li>
-                        Orange
-                        <ol>
-                            <li>First</li>
-                            <li>Second</li>
-                            <li>Third</li>
-                        </ol>
-                    </li>
-                    <li>Apple</li>
-                    <li>Appricot</li>
-                </ul>
-            </div>
+        <section class="js-table-of-contents">
+            <h2 class="js-table-of-contents-item">Headings</h2>
+            <h1>Heading 1</h1>
+            <h2>Heading 2</h2>
+            <h3>Heading 3</h3>
+            <h4>Heading 4</h4>
+            <h5>Heading 5</h5>
+            <h6>Heading 6</h6>
+        </section>
 
-            <div class="look-fieldset js-heading">
-                <div class="legend"><span>PRE & CODE</span></div>
-                <p>
-                    Integer <code>tincidunt</code> turpis egestas. Aenean mollis ultrices, velit nec
-                    sapien eros, varius felis neque, vitae lorem odio non sem. Quisque in
-                    neque odio eu.
-                </p>
+        <section class="js-table-of-contents">
+            <h2 class="js-table-of-contents-item">Lists</h2>
+            <p>Unordered:</p>
+            <ul>
+                <li><a href="#">Orange</a></li>
+                <li>Apple</li>
+                <li>Appricot</li>
+                <li>Lorem ipsum dolor sit amet sapien pede bibendum a, mauris. Lorem ipsum dolor nulla, auctor velit. Mauris nunc ac turpis faucibus vestibulum. Etiam tempor pede ac ornare eu, luctus et lorem. Cras dignissim. Morbi sodales wisi a lacus. Maecenas blandit risus dolor fermentum odio. Morbi accumsan, dolor id eros. Suspendisse diam. Suspendisse vitae sagittis eget, enim. Maecenas tortor et malesuada ultricies.</li>
+            </ul>
+            <p>Ordered:</p>
+            <ol>
+                <li>First</li>
+                <li>Second</li>
+                <li>Third</li>
+            </ol>
+            <p>Nested:</p>
+            <ul>
+                <li>
+                    Orange
+                    <ol>
+                        <li>First</li>
+                        <li>Second</li>
+                        <li>Third</li>
+                    </ol>
+                </li>
+                <li>Apple</li>
+                <li>Appricot</li>
+            </ul>
+        </section>
+
+        <section class="js-table-of-contents">
+            <h2 class="js-table-of-contents-item">PRE &amp; CODE</h2>
+            <p>
+                Integer <code>tincidunt</code> turpis egestas. Aenean mollis ultrices, velit nec
+                sapien eros, varius felis neque, vitae lorem odio non sem. Quisque in
+                neque odio eu.
+            </p>
 <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -87,23 +121,23 @@
     &lt;/head&gt;
 &lt;/html&gt;
 </pre>
-            </div>
+        </section>
 
-            <div class="look-fieldset js-heading">
-                <div class="legend"><span>Icons</span></div>
-<div class="js-code-sample">
-<h3>
-    <a href="http://fontawesome.io/">Font Awesome</a> icon font is already included:
-    <i class="fa fa-facebook-square" aria-hidden="true"></i>
-    <i class="fa fa-dropbox" aria-hidden="true"></i>
-    <i class="fa fa-twitter" aria-hidden="true"></i>
-    <i class="fa fa-instagram" aria-hidden="true"></i>
-</h3>
-</div>
+        <section class="js-table-of-contents">
+            <h2 class="js-table-of-contents-item">Icons</h2>
+            <div class="js-code-sample">
+                <h3>
+                    <a href="http://fontawesome.io/">Font Awesome</a> icon font is already included:
+                    <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                    <i class="fa fa-dropbox" aria-hidden="true"></i>
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                </h3>
             </div>
+        </section>
 
-            <div class="look-fieldset js-heading">
-                <div class="legend"><span>Buttons</span></div>
+        <section class="js-table-of-contents">
+            <h2 class="js-table-of-contents-item">Buttons</h2>
 <div class="js-code-sample">
 <p>
     <a href="#" class="look-button">Default button</a>
@@ -138,6 +172,8 @@
     <a href="#" class="look-button -small -icon -cyan"><i aria-hidden="true" class="fa fa-video-camera"></i><span>Cyan</span></a>
     <a href="#" class="look-button -small -icon -teal"><i aria-hidden="true" class="fa fa-video-camera"></i><span>Teal</span></a>
     <a href="#" class="look-button -small -icon -green"><i aria-hidden="true" class="fa fa-video-camera"></i><span>Green</span></a>
+</p>
+<p>
     <a href="#" class="look-button -small -icon -lime"><i aria-hidden="true" class="fa fa-video-camera"></i><span>Lime</span></a>
     <a href="#" class="look-button -small -icon -yellow"><i aria-hidden="true" class="fa fa-video-camera"></i><span>Yellow</span></a>
     <a href="#" class="look-button -small -icon -amber"><i aria-hidden="true" class="fa fa-video-camera"></i><span>Amber</span></a>
@@ -148,10 +184,10 @@
     <a href="#" class="look-button -small -icon -white"><i aria-hidden="true" class="fa fa-video-camera"></i><span>White</span></a>
 </p>
 </div>
-            </div>
+        </section>
 
-            <div class="look-fieldset js-heading">
-                <div class="legend"><span>Forms</span></div>
+        <section class="js-table-of-contents">
+            <h2 class="js-table-of-contents-item">Forms</h2>
 <div class="js-code-sample">
 <div class="look-form -input">
     <label for="field">Field label</label>
@@ -174,11 +210,11 @@
     <div class="hint">Field hint</div>
 </div>
 </div>
-            </div>
+        </section>
 
-            <div class="look-fieldset js-heading">
-                <div class="legend"><span>Fieldsets</span></div>
-                <p>Use <code>.look-fieldset</code> to group related form fields together:</p>
+        <section class="js-table-of-contents">
+            <h2 class="js-table-of-contents-item">Fieldsets</h2>
+            <p>Use <code>.look-fieldset</code> to group related form fields together:</p>
 <div class="js-code-sample">
 <fieldset class="look-fieldset">
     <legend class="legend"><span>Log in</span></legend>
@@ -197,7 +233,7 @@
     </div>
 </fieldset>
 </div>
-                <p><code>.look-fieldset</code> can be used also without <code>fieldset</code> tag:</p>
+            <p><code>.look-fieldset</code> can be used also without <code>fieldset</code> tag:</p>
 <div class="js-code-sample">
 <div class="look-fieldset">
     <div class="legend"><span>Test</span></div>
@@ -211,10 +247,10 @@
     </p>
 </div>
 </div>
-            </div>
+        </section>
 
-            <div class="look-fieldset js-heading">
-                <div class="legend"><span>Segments</span></div>
+        <section class="js-table-of-contents">
+            <h2 class="js-table-of-contents-item">Segments</h2>
 <div class="js-code-sample">
 <div class="look-segment">
     <div class="body">
@@ -239,31 +275,56 @@
     </div>
 </div>
 </div>
+        </section>
+
+        <section class="js-table-of-contents">
+            <h2 class="js-table-of-contents-item">Baloons</h2>
+            <div class="js-code-sample">
+                <div class="look-balloon">
+                    <p>
+                        <a href="#">Lorem ipsum</a> dolor sit amet sapien pede bibendum a, mauris. Lorem ipsum
+                        dolor nulla, auctor velit. Mauris nunc ac turpis faucibus vestibulum.
+                        Etiam tempor pede ac ornare eu, luctus et lorem. Cras dignissim. Morbi
+                        sodales wisi a lacus. Maecenas blandit risus dolor fermentum odio.
+                        Morbi accumsan, dolor id eros. Suspendisse diam. Suspendisse vitae
+                        sagittis eget, enim. Maecenas tortor et malesuada ultricies.
+                    </p>
+                </div>
             </div>
+            <div class="js-code-sample">
+                <div class="look-balloon -topright">
+                    <p>
+                        <a href="#">Lorem ipsum</a> dolor sit amet sapien pede bibendum a, mauris. Lorem ipsum
+                        dolor nulla, auctor velit. Mauris nunc ac turpis faucibus vestibulum.
+                        Etiam tempor pede ac ornare eu, luctus et lorem. Cras dignissim. Morbi
+                        sodales wisi a lacus. Maecenas blandit risus dolor fermentum odio.
+                        Morbi accumsan, dolor id eros. Suspendisse diam. Suspendisse vitae
+                        sagittis eget, enim. Maecenas tortor et malesuada ultricies.
+                    </p>
+                </div>
+            </div>
+        </section>
 
-        </div>
-        <div class="col _padding-default" style="width: 25%">
-
-            <h2>Table of contents</h2>
-            <div id="toc"></div>
-
-        </div>
     </div>
+    <div class="col _padding-default" style="width: 25%">
 
+        <h2>Table of contents</h2>
+        <div id="table-of-contents"></div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="js/jquery.horizontalGrid.js"></script>
-    <script src="js/jquery.stylesheetSwitch.js"></script>
-    <script src="js/jquery.codeSample.js"></script>
-    <script src="js/jquery.toc.js"></script>
-    <script>
-        $.horizontalGrid();
-        $('link[rel="stylesheet"]').stylesheetSwitch();
-        $('.js-code-sample').codeSample();
-        $('.js-heading').toc({
-            container: '#toc'
-        });
-    </script>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="js/jquery.horizontalGrid.js"></script>
+<script src="js/jquery.stylesheetSwitch.js"></script>
+<script src="js/jquery.codeSample.js"></script>
+<script src="js/jquery.tableOfContents.js"></script>
+<script>
+    $('#table-of-contents').tableOfContents();
+    $('#horizontal-grid').horizontalGrid();
+    $('#stylesheet-switch').stylesheetSwitch();
+    $('.js-code-sample').codeSample();
+</script>
 
 </body>
 </html>

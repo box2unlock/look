@@ -1,0 +1,45 @@
+.xlook-comment
+{
+    @include rem(margin-top, $look-unit);
+    @include rem(margin-bottom, $look-unit);
+    position: relative;
+
+    > .header,
+    > .body
+    {
+        @include rem(padding-left, 2*$look-unit + $look-unit/2);
+    }
+
+    > .avatar
+    {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 2*$look-unit;
+        height: 2*$look-unit;
+        overflow: hidden;
+        background: red;
+
+        img
+        {
+            display: none;
+        }
+    }
+
+    > .body
+    {
+        background: #ccc;
+        @include rem(padding, $look-unit);
+        @include rem(border-radius, $look-border-radius);
+
+        > *:first-child
+        {
+            margin-top: 0;
+        }
+
+        > *:last-child
+        {
+            margin-bottom: 0;
+        }
+    }
+}

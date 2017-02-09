@@ -1,0 +1,48 @@
+.look-balloon
+{
+    position: relative;
+    background: $look-color-balloon;
+    @include rem(border-radius, $look-border-radius);
+    border-top-left-radius: 0;
+    @include rem(padding, $look-unit);
+    @include rem(margin-left, $look-unit);
+
+    &.-topright
+    {
+        @include rem(border-radius, $look-border-radius);
+        border-top-right-radius: 0;
+        @include rem(margin-right, $look-unit);
+        margin-left: 0;
+
+        &:before
+        {
+            left: auto;
+            right: -$look-unit;
+            border-width: $look-unit $look-unit 0 0;
+            border-color: $look-color-balloon transparent transparent transparent;
+        }
+    }
+
+    &:before
+    {
+        position: absolute;
+        top: 0;
+        left: -$look-unit;
+        content: '';
+        width: 0;
+        height: 0;
+        border-style: solid;
+        @include rem(border-width, 0 $look-unit $look-unit 0);
+        border-color: transparent $look-color-balloon transparent transparent;
+    }
+
+    > *:first-child
+    {
+        margin-top: 0;
+    }
+
+    > *:last-child
+    {
+        margin-bottom: 0;
+    }
+}

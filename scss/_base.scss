@@ -21,6 +21,8 @@ a
 
 h1, h2, h3, h4, h5, h6
 {
+    @include rem(margin-top, $look-unit);
+    @include rem(margin-bottom, $look-unit);
     @include rem(letter-spacing, -2px);
     color: $look-color-heading;
 }
@@ -28,50 +30,44 @@ h1, h2, h3, h4, h5, h6
 h1
 {
     @include rem(font-size, $look-font-size-h1);
-    @include rem(margin-top, $look-unit);
-    @include rem(margin-bottom, $look-unit);
-    line-height: 2 * $look-unit / $look-font-size-h1;
+    // line-height: 2 * $look-unit / $look-font-size-h1;
+    line-height: 1.18;
 }
 
 h2
 {
     @include rem(font-size, $look-font-size-h2);
-    @include rem(margin-top, $look-unit);
-    @include rem(margin-bottom, $look-unit);
-    line-height: 2 * $look-unit / $look-font-size-h2;
+    // line-height: 2 * $look-unit / $look-font-size-h2;
+    line-height: 1.34;
 }
 
 h3
 {
     @include rem(font-size, $look-font-size-h3);
-    @include rem(margin-top, $look-unit);
-    @include rem(margin-bottom, $look-unit);
-    line-height: 2 * $look-unit / $look-font-size-h3;
+    // line-height: 2 * $look-unit / $look-font-size-h3;
+    line-height: 1.54;
 }
 
 h4
 {
     @include rem(font-size, $look-font-size-h4);
-    @include rem(margin-top, $look-unit);
-    @include rem(margin-bottom, $look-unit);
-    line-height: $look-unit / $look-font-size-h4;
+    // line-height: $look-unit / $look-font-size-h4;
+    line-height: 0.91;
 }
 
 h5
 {
     @include rem(font-size, $look-font-size-h5);
-    @include rem(margin-top, $look-unit);
-    @include rem(margin-bottom, $look-unit);
-    line-height: $look-unit / $look-font-size-h5;
+    // line-height: $look-unit / $look-font-size-h5;
+    line-height: 1.12;
     @include rem(letter-spacing, -1.5px);
 }
 
 h6
 {
     @include rem(font-size, $look-font-size-h6);
-    @include rem(margin-top, $look-unit);
-    @include rem(margin-bottom, $look-unit);
-    line-height: $look-unit / $look-font-size-h6;
+    // line-height: $look-unit / $look-font-size-h6;
+    line-height: 1.43;
     @include rem(letter-spacing, -1px);
 }
 
@@ -128,7 +124,8 @@ code
 {
     color: $look-color-code;
     white-space: nowrap;
-    @include rem(padding, 2px 4px 1px 4px);
+    @include rem(padding, 2px 4px);
     border-radius: $look-border-radius;
     background: $look-color-code-background;
+    @include rem(font-size, 13px);
 }

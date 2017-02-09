@@ -45,7 +45,19 @@
 
 ._margin-default
 {
-    margin: $look-unit !important;
+    @include rem(margin, $look-unit !important);
+}
+
+._margin-default-x
+{
+    @include rem(margin-left, $look-unit !important);
+    @include rem(margin-right, $look-unit !important);
+}
+
+._margin-default-y
+{
+    @include rem(margin-top, $look-unit !important);
+    @include rem(margin-bottom, $look-unit !important);
 }
 
 ._padding-reset
@@ -55,5 +67,17 @@
 
 ._padding-default
 {
-    padding: $look-unit !important;
+    @include rem(padding, $look-unit !important);
+}
+
+._padding-default-x
+{
+    @include rem(padding-left, $look-unit !important);
+    @include rem(padding-right, $look-unit !important);
+}
+
+._padding-default-y
+{
+    @include rem(padding-top, $look-unit !important);
+    @include rem(padding-bottom, $look-unit !important);
 }
