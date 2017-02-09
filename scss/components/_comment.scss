@@ -1,13 +1,31 @@
-.xlook-comment
+.look-comment
 {
     @include rem(margin-top, $look-unit);
     @include rem(margin-bottom, $look-unit);
+    @include rem(padding-left, 2*$look-unit + $look-unit/2);
     position: relative;
 
-    > .header,
-    > .body
+    &.-topright
     {
-        @include rem(padding-left, 2*$look-unit + $look-unit/2);
+        padding-left: 0;
+        @include rem(padding-right, 2*$look-unit + $look-unit/2);
+
+        > .header
+        {
+            text-align: right;
+        }
+
+        > .avatar
+        {
+            left: auto;
+            right: 0;
+        }
+    }
+
+    > .header
+    {
+        @include rem(font-size, 13px);
+        line-height: $look-unit / 13px;
     }
 
     > .avatar
@@ -18,28 +36,17 @@
         width: 2*$look-unit;
         height: 2*$look-unit;
         overflow: hidden;
-        background: red;
 
+        a,
         img
         {
-            display: none;
+            display: block;
         }
     }
 
-    > .body
+    .look-balloon
     {
-        background: #ccc;
-        @include rem(padding, $look-unit);
-        @include rem(border-radius, $look-border-radius);
-
-        > *:first-child
-        {
-            margin-top: 0;
-        }
-
-        > *:last-child
-        {
-            margin-bottom: 0;
-        }
+        margin-top: 0;
+        margin-bottom: 0;
     }
 }
