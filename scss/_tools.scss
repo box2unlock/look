@@ -1,3 +1,56 @@
 @import "../components/sass-rem/rem";
 @import '../components/font-awesome/scss/font-awesome.scss';
 @import "../components/google-material-color/dist/palette.scss";
+
+$look-colors: (
+        'red': palette(Red, 500),
+        'pink': palette(Pink, 500),
+        'purple': palette(Purple, 500),
+        'deeppurple': palette(Deep Purple, 500),
+        'indigo': palette(Indigo, 500),
+        'blue': palette(Blue, 500),
+        'lightblue': palette(Light Blue, 500),
+        'cyan': palette(Cyan, 500),
+        'teal': palette(Teal, 500),
+        'green': palette(Green, 500),
+        'lightgreen': palette(Light Green, 500),
+        'lime': palette(Lime, 500),
+        'yellow': palette(Yellow, 500),
+        'amber': palette(Amber, 500),
+        'orange': palette(Orange, 500),
+        'deeporange': palette(Deep Orange, 500),
+        'brown': palette(Brown, 500),
+        'grey': palette(Grey, 500),
+        'bluegrey': palette(Blue Grey, 500),
+        'black': palette(Black, 500),
+        'white': palette(White, 500),
+);
+
+// Useful Compass functions
+// https://github.com/Compass/compass/tree/stable/core/stylesheets/compass/utilities/color
+
+@function brightness($color)
+{
+    @if type-of($color) == color {
+        @return ((red($color) * .299) + (green($color) * .587) + (blue($color) * .114)) / 255 * 100%;
+    }
+    @else {
+        @return unquote("brightness(#{$color})");
+    }
+}
+
+$look-color-contrast-dark: #000 !default;
+$look-color-contrast-light: #fff !default;
+
+@function contrast-color($color, $dark: $look-color-contrast-dark, $light: $look-color-contrast-light)
+{
+    @if $color == null {
+        @return null;
+    }
+    @else {
+        $color-brightness: brightness($color);
+        $dark-text-brightness: brightness($dark);
+        $light-text-brightness: brightness($light);
+        @return if(abs($color-brightness - $light-text-brightness) > abs($color-brightness - $dark-text-brightness), $light, $dark);
+    }
+}

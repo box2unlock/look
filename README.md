@@ -3,8 +3,8 @@ Look
 
 Minimalistic CSS framework.
 
-A set of CSS rules & basic user-interface components. Built primarily for my 
-site [box2unlock.com](https://box2unlock.com/) but released publicly as it might 
+A set of CSS rules & basic user-interface components. Built primarily for my
+site [box2unlock.com](https://box2unlock.com/) but released publicly as it might
 be useful as a foundation for other projects out there. Plain and simple.
 
 Demo
@@ -26,13 +26,13 @@ Features
 Compiling
 ---------
 
-Install [node-sass](https://github.com/sass/node-sass) (extremely 
+Install [node-sass](https://github.com/sass/node-sass) (extremely
 fast [Sass](http://sass-lang.com/) compiler).
 
 ```
 node-sass
 --source-map true
---precision 2
+--precision 10
 --output-style compressed
 $FileName$ ../css/$FileNameWithoutExtension$.css
 ```

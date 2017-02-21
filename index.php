@@ -47,6 +47,11 @@
     <div class="col _padding-default" style="width: 75%">
 
         <div class="_text-center">
+            <div class="look-cube" style="margin-left: auto; margin-right: auto">
+                <div class="side top"></div>
+                <div class="side left"></div>
+                <div class="side right"></div>
+            </div>
             <h1>Look</h1>
             <p>
                 Minimalistic CSS framework<br>
@@ -167,19 +172,26 @@
     <a href="#" class="look-button -small -icon -red"><i aria-hidden="true" class="fa fa-video-camera"></i><span>Red</span></a>
     <a href="#" class="look-button -small -icon -pink"><i aria-hidden="true" class="fa fa-video-camera"></i><span>Pink</span></a>
     <a href="#" class="look-button -small -icon -purple"><i aria-hidden="true" class="fa fa-video-camera"></i><span>Purple</span></a>
+    <a href="#" class="look-button -small -icon -deeppurple"><i aria-hidden="true" class="fa fa-video-camera"></i><span>Deep Purple</span></a>
     <a href="#" class="look-button -small -icon -indigo"><i aria-hidden="true" class="fa fa-video-camera"></i><span>Indigo</span></a>
     <a href="#" class="look-button -small -icon -blue"><i aria-hidden="true" class="fa fa-video-camera"></i><span>Blue</span></a>
+    <a href="#" class="look-button -small -icon -lightblue"><i aria-hidden="true" class="fa fa-video-camera"></i><span>Light Blue</span></a>
+</p>
+<p>
     <a href="#" class="look-button -small -icon -cyan"><i aria-hidden="true" class="fa fa-video-camera"></i><span>Cyan</span></a>
     <a href="#" class="look-button -small -icon -teal"><i aria-hidden="true" class="fa fa-video-camera"></i><span>Teal</span></a>
     <a href="#" class="look-button -small -icon -green"><i aria-hidden="true" class="fa fa-video-camera"></i><span>Green</span></a>
-</p>
-<p>
+    <a href="#" class="look-button -small -icon -lightgreen"><i aria-hidden="true" class="fa fa-video-camera"></i><span>Light Green</span></a>
     <a href="#" class="look-button -small -icon -lime"><i aria-hidden="true" class="fa fa-video-camera"></i><span>Lime</span></a>
     <a href="#" class="look-button -small -icon -yellow"><i aria-hidden="true" class="fa fa-video-camera"></i><span>Yellow</span></a>
     <a href="#" class="look-button -small -icon -amber"><i aria-hidden="true" class="fa fa-video-camera"></i><span>Amber</span></a>
+</p>
+<p>
     <a href="#" class="look-button -small -icon -orange"><i aria-hidden="true" class="fa fa-video-camera"></i><span>Orange</span></a>
+    <a href="#" class="look-button -small -icon -deeporange"><i aria-hidden="true" class="fa fa-video-camera"></i><span>Deep Orange</span></a>
     <a href="#" class="look-button -small -icon -brown"><i aria-hidden="true" class="fa fa-video-camera"></i><span>Brown</span></a>
     <a href="#" class="look-button -small -icon -grey"><i aria-hidden="true" class="fa fa-video-camera"></i><span>Grey</span></a>
+    <a href="#" class="look-button -small -icon -bluegrey"><i aria-hidden="true" class="fa fa-video-camera"></i><span>Blue Grey</span></a>
     <a href="#" class="look-button -small -icon -black"><i aria-hidden="true" class="fa fa-video-camera"></i><span>Black</span></a>
     <a href="#" class="look-button -small -icon -white"><i aria-hidden="true" class="fa fa-video-camera"></i><span>White</span></a>
 </p>
@@ -275,6 +287,430 @@
     </div>
 </div>
 </div>
+<div class="js-code-sample">
+<div class="look-segment -red">
+    <div class="header">
+        Some header
+    </div>
+    <div class="body">
+        <p>
+            <a href="#">Lorem ipsum</a> dolor sit amet sapien pede bibendum a, mauris.
+        </p>
+    </div>
+</div>
+<div class="look-segment -pink">
+    <div class="header">
+        Some header
+    </div>
+    <div class="body">
+        <p>
+            <a href="#">Lorem ipsum</a> dolor sit amet sapien pede bibendum a, mauris.
+        </p>
+    </div>
+</div>
+<div class="look-segment -purple">
+    <div class="header">
+        Some header
+    </div>
+    <div class="body">
+        <p>
+            <a href="#">Lorem ipsum</a> dolor sit amet sapien pede bibendum a, mauris.
+        </p>
+    </div>
+</div>
+<div class="look-segment -deeppurple">
+    <div class="header">
+        Some header
+    </div>
+    <div class="body">
+        <p>
+            <a href="#">Lorem ipsum</a> dolor sit amet sapien pede bibendum a, mauris.
+        </p>
+    </div>
+</div>
+<div class="look-segment -indigo">
+    <div class="header">
+        Some header
+    </div>
+    <div class="body">
+        <p>
+            <a href="#">Lorem ipsum</a> dolor sit amet sapien pede bibendum a, mauris.
+        </p>
+    </div>
+</div>
+<div class="look-segment -blue">
+    <div class="header">
+        Some header
+    </div>
+    <div class="body">
+        <p>
+            <a href="#">Lorem ipsum</a> dolor sit amet sapien pede bibendum a, mauris.
+        </p>
+    </div>
+</div>
+<div class="look-segment -lightblue">
+    <div class="header">
+        Some header
+    </div>
+    <div class="body">
+        <p>
+            <a href="#">Lorem ipsum</a> dolor sit amet sapien pede bibendum a, mauris.
+        </p>
+    </div>
+</div>
+<div class="look-segment -cyan">
+    <div class="header">
+        Some header
+    </div>
+    <div class="body">
+        <p>
+            <a href="#">Lorem ipsum</a> dolor sit amet sapien pede bibendum a, mauris.
+        </p>
+    </div>
+</div>
+<div class="look-segment -teal">
+    <div class="header">
+        Some header
+    </div>
+    <div class="body">
+        <p>
+            <a href="#">Lorem ipsum</a> dolor sit amet sapien pede bibendum a, mauris.
+        </p>
+    </div>
+</div>
+<div class="look-segment -green">
+    <div class="header">
+        Some header
+    </div>
+    <div class="body">
+        <p>
+            <a href="#">Lorem ipsum</a> dolor sit amet sapien pede bibendum a, mauris.
+        </p>
+    </div>
+</div>
+<div class="look-segment -lightgreen">
+    <div class="header">
+        Some header
+    </div>
+    <div class="body">
+        <p>
+            <a href="#">Lorem ipsum</a> dolor sit amet sapien pede bibendum a, mauris.
+        </p>
+    </div>
+</div>
+<div class="look-segment -lime">
+    <div class="header">
+        Some header
+    </div>
+    <div class="body">
+        <p>
+            <a href="#">Lorem ipsum</a> dolor sit amet sapien pede bibendum a, mauris.
+        </p>
+    </div>
+</div>
+<div class="look-segment -yellow">
+    <div class="header">
+        Some header
+    </div>
+    <div class="body">
+        <p>
+            <a href="#">Lorem ipsum</a> dolor sit amet sapien pede bibendum a, mauris.
+        </p>
+    </div>
+</div>
+<div class="look-segment -amber">
+    <div class="header">
+        Some header
+    </div>
+    <div class="body">
+        <p>
+            <a href="#">Lorem ipsum</a> dolor sit amet sapien pede bibendum a, mauris.
+        </p>
+    </div>
+</div>
+<div class="look-segment -orange">
+    <div class="header">
+        Some header
+    </div>
+    <div class="body">
+        <p>
+            <a href="#">Lorem ipsum</a> dolor sit amet sapien pede bibendum a, mauris.
+        </p>
+    </div>
+</div>
+<div class="look-segment -deeporange">
+    <div class="header">
+        Some header
+    </div>
+    <div class="body">
+        <p>
+            <a href="#">Lorem ipsum</a> dolor sit amet sapien pede bibendum a, mauris.
+        </p>
+    </div>
+</div>
+<div class="look-segment -brown">
+    <div class="header">
+        Some header
+    </div>
+    <div class="body">
+        <p>
+            <a href="#">Lorem ipsum</a> dolor sit amet sapien pede bibendum a, mauris.
+        </p>
+    </div>
+</div>
+<div class="look-segment -grey">
+    <div class="header">
+        Some header
+    </div>
+    <div class="body">
+        <p>
+            <a href="#">Lorem ipsum</a> dolor sit amet sapien pede bibendum a, mauris.
+        </p>
+    </div>
+</div>
+<div class="look-segment -bluegrey">
+    <div class="header">
+        Some header
+    </div>
+    <div class="body">
+        <p>
+            <a href="#">Lorem ipsum</a> dolor sit amet sapien pede bibendum a, mauris.
+        </p>
+    </div>
+</div>
+<div class="look-segment -black">
+    <div class="header">
+        Some header
+    </div>
+    <div class="body">
+        <p>
+            <a href="#">Lorem ipsum</a> dolor sit amet sapien pede bibendum a, mauris.
+        </p>
+    </div>
+</div>
+<div class="look-segment -white">
+    <div class="header">
+        Some header
+    </div>
+    <div class="body">
+        <p>
+            <a href="#">Lorem ipsum</a> dolor sit amet sapien pede bibendum a, mauris.
+        </p>
+    </div>
+</div>
+</div>
+<div class="js-code-sample">
+<div class="look-segment -red">
+    <div class="header -filled">
+        Some header
+    </div>
+    <div class="body">
+        <p>
+            <a href="#">Lorem ipsum</a> dolor sit amet sapien pede bibendum a, mauris.
+        </p>
+    </div>
+</div>
+<div class="look-segment -pink">
+    <div class="header -filled">
+        Some header
+    </div>
+    <div class="body">
+        <p>
+            <a href="#">Lorem ipsum</a> dolor sit amet sapien pede bibendum a, mauris.
+        </p>
+    </div>
+</div>
+<div class="look-segment -purple">
+    <div class="header -filled">
+        Some header
+    </div>
+    <div class="body">
+        <p>
+            <a href="#">Lorem ipsum</a> dolor sit amet sapien pede bibendum a, mauris.
+        </p>
+    </div>
+</div>
+<div class="look-segment -deeppurple">
+    <div class="header -filled">
+        Some header
+    </div>
+    <div class="body">
+        <p>
+            <a href="#">Lorem ipsum</a> dolor sit amet sapien pede bibendum a, mauris.
+        </p>
+    </div>
+</div>
+<div class="look-segment -indigo">
+    <div class="header -filled">
+        Some header
+    </div>
+    <div class="body">
+        <p>
+            <a href="#">Lorem ipsum</a> dolor sit amet sapien pede bibendum a, mauris.
+        </p>
+    </div>
+</div>
+<div class="look-segment -blue">
+    <div class="header -filled">
+        Some header
+    </div>
+    <div class="body">
+        <p>
+            <a href="#">Lorem ipsum</a> dolor sit amet sapien pede bibendum a, mauris.
+        </p>
+    </div>
+</div>
+<div class="look-segment -lightblue">
+    <div class="header -filled">
+        Some header
+    </div>
+    <div class="body">
+        <p>
+            <a href="#">Lorem ipsum</a> dolor sit amet sapien pede bibendum a, mauris.
+        </p>
+    </div>
+</div>
+<div class="look-segment -cyan">
+    <div class="header -filled">
+        Some header
+    </div>
+    <div class="body">
+        <p>
+            <a href="#">Lorem ipsum</a> dolor sit amet sapien pede bibendum a, mauris.
+        </p>
+    </div>
+</div>
+<div class="look-segment -teal">
+    <div class="header -filled">
+        Some header
+    </div>
+    <div class="body">
+        <p>
+            <a href="#">Lorem ipsum</a> dolor sit amet sapien pede bibendum a, mauris.
+        </p>
+    </div>
+</div>
+<div class="look-segment -green">
+    <div class="header -filled">
+        Some header
+    </div>
+    <div class="body">
+        <p>
+            <a href="#">Lorem ipsum</a> dolor sit amet sapien pede bibendum a, mauris.
+        </p>
+    </div>
+</div>
+<div class="look-segment -lightgreen">
+    <div class="header -filled">
+        Some header
+    </div>
+    <div class="body">
+        <p>
+            <a href="#">Lorem ipsum</a> dolor sit amet sapien pede bibendum a, mauris.
+        </p>
+    </div>
+</div>
+<div class="look-segment -lime">
+    <div class="header -filled">
+        Some header
+    </div>
+    <div class="body">
+        <p>
+            <a href="#">Lorem ipsum</a> dolor sit amet sapien pede bibendum a, mauris.
+        </p>
+    </div>
+</div>
+<div class="look-segment -yellow">
+    <div class="header -filled">
+        Some header
+    </div>
+    <div class="body">
+        <p>
+            <a href="#">Lorem ipsum</a> dolor sit amet sapien pede bibendum a, mauris.
+        </p>
+    </div>
+</div>
+<div class="look-segment -amber">
+    <div class="header -filled">
+        Some header
+    </div>
+    <div class="body">
+        <p>
+            <a href="#">Lorem ipsum</a> dolor sit amet sapien pede bibendum a, mauris.
+        </p>
+    </div>
+</div>
+<div class="look-segment -orange">
+    <div class="header -filled">
+        Some header
+    </div>
+    <div class="body">
+        <p>
+            <a href="#">Lorem ipsum</a> dolor sit amet sapien pede bibendum a, mauris.
+        </p>
+    </div>
+</div>
+<div class="look-segment -deeporange">
+    <div class="header -filled">
+        Some header
+    </div>
+    <div class="body">
+        <p>
+            <a href="#">Lorem ipsum</a> dolor sit amet sapien pede bibendum a, mauris.
+        </p>
+    </div>
+</div>
+<div class="look-segment -brown">
+    <div class="header -filled">
+        Some header
+    </div>
+    <div class="body">
+        <p>
+            <a href="#">Lorem ipsum</a> dolor sit amet sapien pede bibendum a, mauris.
+        </p>
+    </div>
+</div>
+<div class="look-segment -grey">
+    <div class="header -filled">
+        Some header
+    </div>
+    <div class="body">
+        <p>
+            <a href="#">Lorem ipsum</a> dolor sit amet sapien pede bibendum a, mauris.
+        </p>
+    </div>
+</div>
+<div class="look-segment -bluegrey">
+    <div class="header -filled">
+        Some header
+    </div>
+    <div class="body">
+        <p>
+            <a href="#">Lorem ipsum</a> dolor sit amet sapien pede bibendum a, mauris.
+        </p>
+    </div>
+</div>
+<div class="look-segment -black">
+    <div class="header -filled">
+        Some header
+    </div>
+    <div class="body">
+        <p>
+            <a href="#">Lorem ipsum</a> dolor sit amet sapien pede bibendum a, mauris.
+        </p>
+    </div>
+</div>
+<div class="look-segment -white">
+    <div class="header -filled">
+        Some header
+    </div>
+    <div class="body">
+        <p>
+            <a href="#">Lorem ipsum</a> dolor sit amet sapien pede bibendum a, mauris.
+        </p>
+    </div>
+</div>
+</div>
         </section>
 
         <section class="js-table-of-contents">
@@ -347,6 +783,25 @@
             sagittis eget, enim. Maecenas tortor et malesuada ultricies.
         </p>
     </div>
+</div>
+</div>
+        </section>
+
+        <section class="js-table-of-contents">
+            <h2 class="js-table-of-contents-item">Cubes</h2>
+<div class="js-code-sample">
+<div class="look-cube">
+    <div class="side top"></div>
+    <div class="side left"></div>
+    <div class="side right"></div>
+</div>
+</div>
+<div class="js-code-sample">
+<div class="look-cube">
+    <div class="side top"></div>
+    <div class="side left"></div>
+    <div class="side right"></div>
+    <i class="fa fa-navicon"></i>
 </div>
 </div>
         </section>

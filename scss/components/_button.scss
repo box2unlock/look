@@ -68,38 +68,31 @@
     }
 }
 
-$colors: 'Red' 'Pink' 'Purple' 'Indigo' 'Blue' 'Cyan' 'Teal' 'Green' 'Lime' 'Yellow' 'Amber' 'Orange' 'Brown' 'Grey' 'Black' 'White';
-
-@each $color in $colors
+@each $cl, $color in $look-colors
 {
-    $cl: to-lower-case(#{$color});
-
     .look-button.-#{$cl}
     {
-        background: palette(#{$color}, 500);
-        @if $color == 'White' {
-            color: palette(Black, 500);
-        }
+        background: $color;
+        color: contrast-color($color);
 
         .fa
         {
-            @if $color == 'Black' {
+            @if $cl == 'black' {
                 color: palette(White, 500);
-            } @else if $color == 'White' {
+            } @else if $cl == 'white' {
                 color: palette(Black, 500);
             } @else {
-                color: darken(palette(#{$color}, 500), 20%);
+                color: darken($color, 20%);
             }
         }
 
         &:hover
         {
-            @if $color == 'Black' {
+            @if $cl == 'black' {
                 background: lighten(palette(Black, 500), 20%);
             } @else {
-                background: darken(palette(#{$color}, 500), 10%);
+                background: darken($color, 10%);
             }
         }
     }
-
 }

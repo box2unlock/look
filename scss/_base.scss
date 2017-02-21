@@ -30,44 +30,38 @@ h1, h2, h3, h4, h5, h6
 h1
 {
     @include rem(font-size, $look-font-size-h1);
-    // line-height: 2 * $look-unit / $look-font-size-h1;
-    line-height: 1.18;
+    line-height: 2 * $look-unit / $look-font-size-h1;
 }
 
 h2
 {
     @include rem(font-size, $look-font-size-h2);
-    // line-height: 2 * $look-unit / $look-font-size-h2;
-    line-height: 1.34;
+    line-height: 2 * $look-unit / $look-font-size-h2 + 0.0000001;
 }
 
 h3
 {
     @include rem(font-size, $look-font-size-h3);
-    // line-height: 2 * $look-unit / $look-font-size-h3;
-    line-height: 1.54;
+    line-height: 2 * $look-unit / $look-font-size-h3;
 }
 
 h4
 {
     @include rem(font-size, $look-font-size-h4);
-    // line-height: $look-unit / $look-font-size-h4;
-    line-height: 0.91;
+    line-height: $look-unit / $look-font-size-h4;
 }
 
 h5
 {
     @include rem(font-size, $look-font-size-h5);
-    // line-height: $look-unit / $look-font-size-h5;
-    line-height: 1.12;
+    line-height: $look-unit / $look-font-size-h5;
     @include rem(letter-spacing, -1.5px);
 }
 
 h6
 {
     @include rem(font-size, $look-font-size-h6);
-    // line-height: $look-unit / $look-font-size-h6;
-    line-height: 1.43;
+    line-height: $look-unit / $look-font-size-h6;
     @include rem(letter-spacing, -1px);
 }
 

@@ -34,3 +34,26 @@
         }
     }
 }
+
+@each $cl, $color in $look-colors
+{
+    $color-lighten: lighten($color, 35%);
+
+    .look-segment.-#{$cl}
+    {
+        border-color: $color;
+
+        > .header
+        {
+            box-shadow: inset 0 -1px 0 $color;
+            background: $color-lighten;
+            color: contrast-color($color-lighten);
+        }
+
+        > .header.-filled
+        {
+            background: $color;
+            color: contrast-color($color);
+        }
+    }
+}
