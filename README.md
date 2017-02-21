@@ -10,7 +10,7 @@ be useful as a foundation for other projects out there. Plain and simple.
 Demo
 ----
 
-[https://rawgit.com/box2unlock/look/master/](https://rawgit.com/box2unlock/look/master/)
+[https://rawgit.com/box2unlock/look/master/index.html](https://rawgit.com/box2unlock/look/master/index.html)
 
 Features
 --------
