@@ -1,14 +1,20 @@
 {
-    "name": "look",
-    "description": "Simple set of CSS rules & user-interface components",
-    "main": "css/look.css",
-    "ignore": [
-        "README.md"
-    ],
-    "dependencies": {
-        "normalize-css": "5.0.*",
-        "font-awesome": "4.7.*",
-        "sass-rem": "1.2.*",
-        "google-material-color": "1.3.*"
-    }
+  "name": "look",
+  "description": "Minimalistic CSS framework",
+  "main": "css/daylook.css",
+  "dependencies": {
+    "normalize-css": "5.0.*",
+    "font-awesome": "4.7.*",
+    "sass-rem": "1.2.*",
+    "google-material-color": "1.3.*"
+  },
+  "homepage": "https://github.com/box2unlock/look",
+  "authors": [
+    "Box2Unlock <contact@box2unlock.com>"
+  ],
+  "keywords": [
+    "css",
+    "framework"
+  ],
+  "license": "MIT"
 }
