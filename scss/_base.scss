@@ -123,3 +123,15 @@ code
     background: $look-color-code-background;
     @include rem(font-size, 13px);
 }
+
+img
+{
+    vertical-align: middle;
+    max-width: 100%;
+    height: auto;
+}
+
+label
+{
+    cursor: pointer;
+}

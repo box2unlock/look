@@ -24,7 +24,7 @@ $look-colors: (
         'bluegrey': palette(Blue Grey, 500),
         'black': palette(Black, 500),
         'white': palette(White, 500),
-);
+) !default;
 
 // Useful Compass functions
 // https://github.com/Compass/compass/tree/stable/core/stylesheets/compass/utilities/color
@@ -46,8 +46,7 @@ $look-color-contrast-light: #fff !default;
 {
     @if $color == null {
         @return null;
-    }
-    @else {
+    } @else {
         $color-brightness: brightness($color);
         $dark-text-brightness: brightness($dark);
         $light-text-brightness: brightness($light);

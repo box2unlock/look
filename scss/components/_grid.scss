@@ -3,7 +3,7 @@
  * https://github.com/chrisnager/ungrid
  */
 
-@media (min-width: $look-responsive-breakpoint)
+@media (min-width: $look-md-breakpoint)
 {
     .look-row
     {
@@ -19,7 +19,7 @@
     }
 }
 
-@media (max-width: $look-responsive-breakpoint - 1px)
+@media (max-width: $look-md-breakpoint - 1px)
 {
     .look-row .col
     {

@@ -1,24 +1,28 @@
 // look
 $look-font-path: '../components/font-awesome/fonts' !default;
-$look-font-family: Arial, sans-serif;
-$look-font-size: 14px;
-$look-font-size-h1: 34px;
-$look-font-size-h2: 30px;
-$look-font-size-h3: 26px;
-$look-font-size-h4: 22px;
-$look-font-size-h5: 18px;
-$look-font-size-h6: $look-font-size;
+$look-font-family: Arial, sans-serif !default;
+$look-font-size: 14px !default;
+$look-font-size-h1: 34px !default;
+$look-font-size-h2: 30px !default;
+$look-font-size-h3: 26px !default;
+$look-font-size-h4: 22px !default;
+$look-font-size-h5: 18px !default;
+$look-font-size-h6: $look-font-size !default;
 
-$look-line-height: 1.4285714285;
+$look-line-height: 1.4285714285 !default;
 
-$look-unit: round($look-line-height * $look-font-size);
+$look-unit: round($look-line-height * $look-font-size) !default;
 
-$look-border-radius: 3px;
+$look-border-radius: 3px !default;
 
-$look-responsive-breakpoint: 480px;
+$look-xs-breakpoint: 480px !default;
+$look-sm-breakpoint: 576px !default;
+$look-md-breakpoint: 768px !default;
+$look-lg-breakpoint: 992px !default;
+$look-xl-breakpoint: 1200px !default;
 
 // font awesome
-$fa-font-path: $look-font-path;
+$fa-font-path: $look-font-path !default;
 
 // sass-rem
-$rem-fallback: true;
+$rem-fallback: true !default;
