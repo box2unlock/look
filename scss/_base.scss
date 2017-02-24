@@ -23,7 +23,6 @@ h1, h2, h3, h4, h5, h6
 {
     @include rem(margin-top, $look-unit);
     @include rem(margin-bottom, $look-unit);
-    @include rem(letter-spacing, -2px);
     color: $look-color-heading;
 }
 
@@ -31,38 +30,42 @@ h1
 {
     @include rem(font-size, $look-font-size-h1);
     line-height: 2 * $look-unit / $look-font-size-h1;
+    @include rem(letter-spacing, -3px);
 }
 
 h2
 {
     @include rem(font-size, $look-font-size-h2);
     line-height: 2 * $look-unit / $look-font-size-h2 + 0.0000001;
+    @include rem(letter-spacing, -3px);
 }
 
 h3
 {
     @include rem(font-size, $look-font-size-h3);
     line-height: 2 * $look-unit / $look-font-size-h3;
+    @include rem(letter-spacing, -2px);
 }
 
 h4
 {
     @include rem(font-size, $look-font-size-h4);
     line-height: $look-unit / $look-font-size-h4;
+    @include rem(letter-spacing, -1px);
 }
 
 h5
 {
     @include rem(font-size, $look-font-size-h5);
     line-height: $look-unit / $look-font-size-h5;
-    @include rem(letter-spacing, -1.5px);
+    @include rem(letter-spacing, -1px);
 }
 
 h6
 {
     @include rem(font-size, $look-font-size-h6);
     line-height: $look-unit / $look-font-size-h6;
-    @include rem(letter-spacing, -1px);
+    @include rem(letter-spacing, -0.5px);
 }
 
 ul
@@ -144,7 +147,7 @@ code
     @include rem(padding, 2px 4px);
     border-radius: $look-border-radius;
     background: $look-color-code-background;
-    @include rem(font-size, 13px);
+    @include rem(font-size, 12px);
 }
 
 img
