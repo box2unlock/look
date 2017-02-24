@@ -53,3 +53,18 @@ $look-color-contrast-light: #fff !default;
         @return if(abs($color-brightness - $light-text-brightness) > abs($color-brightness - $dark-text-brightness), $light, $dark);
     }
 }
+
+@mixin remove-margin
+{
+    > *:first-child,
+    > *:first-child > *:first-child
+    {
+        margin-top: 0;
+    }
+
+    > *:last-child,
+    > *:last-child > *:last-child
+    {
+        margin-bottom: 0;
+    }
+}

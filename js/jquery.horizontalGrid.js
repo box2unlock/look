@@ -6,7 +6,8 @@
 
         var settings = $.extend({
             color: '#ccc',
-            height: 20
+            height: 20,
+            appendTo: 'body'
         }, options);
 
         $(window).load(function () {
@@ -30,7 +31,7 @@
             });
 
             self.append(toggleLink);
-            $('body').append(horizontalGrid);
+            $(settings.appendTo).append(horizontalGrid);
 
         });
 

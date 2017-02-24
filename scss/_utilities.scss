@@ -81,3 +81,11 @@
     @include rem(padding-top, $look-unit !important);
     @include rem(padding-bottom, $look-unit !important);
 }
+
+@each $cl, $color in $look-colors
+{
+    ._color-#{$cl}
+    {
+        color: $color !important;
+    }
+}
