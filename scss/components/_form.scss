@@ -53,6 +53,48 @@
         }
     }
 
+    &.-select
+    {
+        label
+        {
+            display: block;
+            font-weight: bold;
+        }
+
+        select
+        {
+            width: 100%;
+            display: block;
+            @include rem(border-radius, $look-border-radius);
+            @include rem(border, 1px solid $look-color-cube-top);
+            @include rem(padding, $look-unit / 2);
+        }
+    }
+
+    &.-checkbox
+    {
+        position: relative;
+
+        label
+        {
+            display: block;
+            font-weight: bold;
+            @include rem(padding-left, $look-unit);
+        }
+
+        input
+        {
+            position: absolute;
+            @include rem(top, 4px);
+            left: 0;
+        }
+
+        .hint
+        {
+            @include rem(padding-left, $look-unit);
+        }
+    }
+
     .hint
     {
         color: $look-color-form-hint;

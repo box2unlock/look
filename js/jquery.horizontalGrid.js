@@ -7,12 +7,13 @@
         var settings = $.extend({
             color: '#ccc',
             height: 20,
+            document: document,
             appendTo: 'body'
         }, options);
 
         $(window).load(function () {
 
-            var documentHeight = $(document).height();
+            var documentHeight = $(settings.document).height();
             var horizontalGridHeight = 0;
 
             var html = '<div style="display:none;position:absolute;z-index:9998;top:0;left:0;width:100%;height:' + documentHeight + 'px;overflow:hidden">';
