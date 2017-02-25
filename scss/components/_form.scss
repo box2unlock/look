@@ -12,12 +12,6 @@
             font-weight: bold;
         }
 
-        &.-error input,
-        &.-error textarea
-        {
-            border-color: $look-color-error;
-        }
-
         input,
         textarea
         {
@@ -32,6 +26,12 @@
                 border-color: $look-color-form-focus;
                 outline: 0;
             }
+        }
+
+        &.-error input,
+        &.-error textarea
+        {
+            border-color: $look-color-error;
         }
     }
 
@@ -68,6 +68,11 @@
             @include rem(border-radius, $look-border-radius);
             @include rem(border, 1px solid $look-color-cube-top);
             @include rem(padding, $look-unit / 2);
+        }
+
+        &.-error select
+        {
+            border-color: $look-color-error;
         }
     }
 
