@@ -4,14 +4,20 @@
     @include rem(margin-bottom, $look-unit);
 
     &.-input,
-    &.-textarea
+    &.-textarea,
+    &.-select,
+    &.-file
     {
         label
         {
             display: block;
             font-weight: bold;
         }
+    }
 
+    &.-input,
+    &.-textarea
+    {
         input,
         textarea
         {
@@ -55,12 +61,6 @@
 
     &.-select
     {
-        label
-        {
-            display: block;
-            font-weight: bold;
-        }
-
         select
         {
             width: 100%;
@@ -97,6 +97,14 @@
         .hint
         {
             @include rem(padding-left, $look-unit);
+        }
+    }
+
+    &.-file
+    {
+        .file
+        {
+            line-height: 2 * $look-unit / $look-font-size;
         }
     }
 
