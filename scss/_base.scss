@@ -140,14 +140,25 @@ pre
     padding: $look-unit;
 }
 
+// inline code
 code
 {
     color: $look-color-code;
-    white-space: nowrap;
     @include rem(padding, 2px 4px);
     border-radius: $look-border-radius;
     background: $look-color-code-background;
     @include rem(font-size, 12px);
+}
+
+// blocks of code
+pre code
+{
+    color: inherit;
+    padding: 0;
+    border-radius: 0;
+    background: transparent;
+    @include rem(font-size, $look-font-size);
+    line-height: $look-line-height;
 }
 
 img

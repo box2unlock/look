@@ -23,6 +23,7 @@
     {
         @include rem(padding, $look-unit - 1px $look-unit);
         @include remove-margin;
+        word-wrap: break-word;
     }
 }
 
