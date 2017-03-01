@@ -1,3 +1,14 @@
+._grayscale
+{
+    -webkit-filter: grayscale(100%) !important;
+    filter: grayscale(100%) !important;
+}
+
+._border-radius
+{
+    border-radius: $look-border-radius !important;
+}
+
 ._text-left
 {
     text-align: left !important;
