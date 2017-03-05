@@ -27,6 +27,7 @@
             color: $look-color-text;
             background: $look-color-background;
             @include rem(border, 1px solid $look-color-form-border);
+            transition: border-color ease-in-out .15s;
 
             &:focus
             {
@@ -68,6 +69,7 @@
             display: block;
             @include rem(border-radius, $look-border-radius);
             @include rem(border, 1px solid $look-color-cube-top);
+            transition: border-color ease-in-out .15s;
             @include rem(padding, $look-unit / 2);
             color: $look-color-text;
             background: $look-color-background;
