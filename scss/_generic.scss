@@ -23,3 +23,8 @@ html
     @include rem-baseline;
 }
 
+::selection
+{
+    color: $look-color-selection;
+    background: $look-color-selection-background;
+}
