@@ -1,0 +1,17 @@
+{
+    "name": "look",
+    "version": "0.0.12",
+    "title": "Look",
+    "description": "Minimalistic CSS framework",
+    "keywords": [
+        "css",
+        "framework"
+    ],
+    "homepage": "https://github.com/box2unlock/look",
+    "author": {
+        "name": "grzesw",
+        "url": "https://kickasssubtitles.com"
+    },
+    "license": "MIT",
+    "main": "index.js"
+}
