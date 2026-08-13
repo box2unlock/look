@@ -1,17 +1,41 @@
 {
-    "name": "look",
-    "version": "0.0.13",
-    "title": "Look",
+    "name": "@box2unlock/look",
+    "version": "0.9.0",
     "description": "Minimalistic CSS framework",
     "keywords": [
         "css",
-        "framework"
+        "framework",
+        "minimalistic",
+        "sass",
+        "scss",
+        "front-end",
+        "look"
     ],
     "homepage": "https://github.com/box2unlock/look",
     "author": {
         "name": "grzesw",
-        "url": "https://kickasssubtitles.com"
+        "url": "https://github.com/grzesw",
+        "email": "box2unlock@xml.ovh"
     },
     "license": "MIT",
-    "main": "index.js"
+    "scripts": {
+        "build": "npm run css",
+        "css": "npm run css:compile && npm run css:minify && npm run css:fonts",
+        "css:fonts": "mkdir -p dist/fonts && cp -f node_modules/@fortawesome/fontawesome-free/webfonts/*.woff2 dist/fonts/",
+        "css:compile": "sass --load-path=node_modules --style=expanded --source-map --embed-sources --no-error-css scss/look.scss dist/look.css",
+        "css:minify": "sass --load-path=node_modules --style=compressed --source-map --embed-sources --no-error-css scss/look.scss dist/look.min.css",
+        "css:watch": "sass --watch --load-path=node_modules --style=expanded --source-map --embed-sources --no-error-css scss/look.scss dist/look.css",
+        "format": "prettier --write \"scss/**/*.scss\"",
+        "format:check": "prettier --check \"scss/**/*.scss\""
+    },
+    "devDependencies": {
+        "prettier": "3.9.6",
+        "prettier-plugin-css-order": "2.2.0"
+    },
+    "dependencies": {
+        "@fortawesome/fontawesome-free": "7.3.1",
+        "@pierreburel/sass-rem": "4.1.0",
+        "modern-normalize": "3.0.1",
+        "sass": "1.102.0"
+    }
 }

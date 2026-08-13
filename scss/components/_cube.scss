@@ -1,67 +1,69 @@
-@mixin cube($size, $color-top, $color-left, $color-right)
-{
-    $cube-size: 0.45 * $size;
-    $top: floor(0.0425 * $size);
-    $left: floor(0.0725 * $size);
+@use "sass:math";
+@use "@pierreburel/sass-rem" as rem;
+@use "../variables" as *;
 
-    width: $size;
-    height: $size;
+@mixin cube($size, $color-top, $color-left, $color-right) {
+    $cube-size: 0.45 * $size;
+    $top: math.floor(0.0425 * $size);
+    $left: math.floor(0.0725 * $size);
     position: relative;
 
-    > .side
-    {
-        height: $cube-size;
-        width: $cube-size;
-        overflow: hidden;
+    width: rem.convert($size);
+    height: rem.convert($size);
+
+    > .side {
         position: absolute;
+        width: rem.convert($cube-size);
+        height: rem.convert($cube-size);
+        overflow: hidden;
     }
 
-    > .top
-    {
-        background: $color-top;
-        top: 0 + $top;
-        left: floor(0.445 * $cube-size) + $left;
+    > .top {
+        top: rem.convert(0 + $top);
+        left: rem.convert(math.floor(0.445 * $cube-size) + $left);
         -webkit-transform: rotate(-45deg) skew(15deg, 15deg);
         -moz-transform: rotate(-45deg) skew(15deg, 15deg);
         transform: rotate(-45deg) skew(15deg, 15deg);
+        background: $color-top;
     }
 
-    > .left
-    {
-        top: floor(0.775 * $cube-size) + $top;
-        left: 0 + $left;
-        background: $color-left;
+    > .left {
+        top: rem.convert(math.floor(0.775 * $cube-size) + $top);
+        left: rem.convert(0 + $left);
         -webkit-transform: rotate(15deg) skew(15deg, 15deg);
         -moz-transform: rotate(15deg) skew(15deg, 15deg);
         transform: rotate(15deg) skew(15deg, 15deg);
+        background: $color-left;
     }
 
-    > .right
-    {
-        top: floor(0.775 * $cube-size) + $top;
-        left: floor(0.89 * $cube-size) + $left;
-        background: $color-right;
+    > .right {
+        top: rem.convert(math.floor(0.775 * $cube-size) + $top);
+        left: rem.convert(math.floor(0.89 * $cube-size) + $left);
         -webkit-transform: rotate(-15deg) skew(-15deg, -15deg);
         -moz-transform: rotate(-15deg) skew(-15deg, -15deg);
         transform: rotate(-15deg) skew(-15deg, -15deg);
+        background: $color-right;
     }
 }
 
-.look-cube
-{
-    @include cube(4 * $look-unit, $look-color-cube-top, $look-color-cube-left, $look-color-cube-right);
+.look-cube {
+    @include cube(
+        4 * $look-spacer,
+        var(--look-color-cube-top),
+        var(--look-color-cube-left),
+        var(--look-color-cube-right)
+    );
 
-    .fa
-    {
-        @include rem(width, $look-unit);
-        @include rem(line-height, $look-unit);
-        background: rgba($look-color-cube-icon-background, 0.6);
-        @include rem(border-radius, $look-border-radius);
-        text-align: center;
+    #{$look-icon} {
         position: absolute;
         top: 50%;
         left: 50%;
-        @include rem(margin-left, -1 * $look-unit / 2);
-        @include rem(margin-top, -1 * $look-unit / 2);
+        width: rem.convert($look-spacer);
+        margin-top: rem.convert(-1 * $look-spacer-2);
+        margin-left: rem.convert(-1 * $look-spacer-2);
+        border-radius: rem.convert($look-border-radius);
+        background: var(--look-color-cube-icon-background);
+        line-height: rem.convert($look-spacer);
+        text-align: center;
     }
 }

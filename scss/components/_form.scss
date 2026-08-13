@@ -1,128 +1,110 @@
-.look-form
-{
-    @include rem(margin-top, $look-unit);
-    @include rem(margin-bottom, $look-unit);
+@use "@pierreburel/sass-rem" as rem;
+@use "../variables" as *;
 
-    &.-input,
-    &.-textarea,
-    &.-select,
-    &.-file
-    {
-        label
-        {
-            display: block;
-            font-weight: bold;
+$look-form-field-padding: $look-spacer-2 - 1px;
+
+$look-form-arrow-size: 5px;
+
+$look-form-select-padding-right: $look-spacer-2 + 2 * $look-form-arrow-size +
+    $look-spacer-2;
+
+.look-form {
+    margin-top: rem.convert($look-spacer);
+    margin-bottom: rem.convert($look-spacer);
+
+    label {
+        display: block;
+        font-weight: bold;
+    }
+
+    &.-input input,
+    &.-textarea textarea,
+    &.-select select {
+        display: block;
+        width: 100%;
+        padding: rem.convert($look-form-field-padding $look-spacer-2);
+        border: 1px solid var(--look-color-form-border);
+        border-radius: rem.convert($look-border-radius);
+        background: var(--look-color-background);
+        color: var(--look-color-text);
+        line-height: inherit;
+        transition: border-color 0.15s ease-in-out;
+
+        &:focus {
+            border-color: var(--look-color-form-focus);
+            outline: 0;
         }
     }
 
-    &.-input,
-    &.-textarea
-    {
-        input,
-        textarea
-        {
-            width: 100%;
-            display: block;
-            @include rem(border-radius, $look-border-radius);
-            color: $look-color-text;
-            background: $look-color-background;
-            @include rem(border, 1px solid $look-color-form-border);
-            transition: border-color ease-in-out .15s;
-
-            &:focus
-            {
-                border-color: $look-color-form-focus;
-                outline: 0;
-            }
-        }
-
-        &.-error input,
-        &.-error textarea
-        {
-            border-color: $look-color-error;
-        }
+    &.-input.-error input,
+    &.-textarea.-error textarea,
+    &.-select.-error select {
+        border-color: var(--look-color-error);
     }
 
-    &.-input
-    {
-        input
-        {
-            @include rem(padding, 11px $look-unit/2);
-        }
+    &.-textarea textarea {
+        height: rem.convert(12 * $look-spacer);
+        resize: vertical;
     }
 
-    &.-textarea
-    {
-        textarea
-        {
-            resize: vertical;
-            @include rem(padding, $look-unit/2);
-            height: 12 * $look-unit;
-        }
+    &.-select select {
+        appearance: none;
+        height: rem.convert(2 * $look-spacer);
+        padding: rem.convert(
+            0 $look-form-select-padding-right 0 $look-spacer-2
+        );
+        background-image:
+            linear-gradient(
+                45deg,
+                transparent 50%,
+                var(--look-color-form-hint) 50%
+            ),
+            linear-gradient(
+                135deg,
+                var(--look-color-form-hint) 50%,
+                transparent 50%
+            );
+        background-position:
+            right rem.convert($look-spacer-2 + $look-form-arrow-size) center,
+            right rem.convert($look-spacer-2) center;
+        background-size: rem.convert(
+            $look-form-arrow-size $look-form-arrow-size
+        );
+        background-repeat: no-repeat;
     }
 
-    &.-select
-    {
-        select
-        {
-            width: 100%;
-            display: block;
-            @include rem(border-radius, $look-border-radius);
-            @include rem(border, 1px solid $look-color-cube-top);
-            transition: border-color ease-in-out .15s;
-            @include rem(padding, $look-unit / 2);
-            color: $look-color-text;
-            background: $look-color-background;
-        }
-
-        &.-error select
-        {
-            border-color: $look-color-error;
-        }
-    }
-
-    &.-checkbox
-    {
+    &.-checkbox {
         position: relative;
 
-        label
-        {
-            display: block;
-            font-weight: bold;
-            @include rem(padding-left, $look-unit);
+        label {
+            padding-left: rem.convert($look-spacer);
         }
 
-        input
-        {
+        input {
             position: absolute;
-            @include rem(top, 4px);
+            top: rem.convert($look-spacer-6);
             left: 0;
         }
 
-        .hint
-        {
-            @include rem(padding-left, $look-unit);
+        .hint {
+            padding-left: rem.convert($look-spacer);
         }
     }
 
-    &.-file
-    {
-        .file
-        {
-            line-height: 2 * $look-unit / $look-font-size;
+    &.-file {
+        .file {
+            line-height: calc(2 * $look-spacer / $look-font-size);
         }
     }
 
-    .hint
-    {
-        color: $look-color-form-hint;
-        @include rem(font-size, 12px);
-        line-height: $look-unit / 12px;
+    .hint {
+        color: var(--look-color-form-hint);
+        font-size: rem.convert(14px);
+        line-height: calc($look-spacer / 14px);
     }
 
-    .error
-    {
-        color: $look-color-error;
+    .error {
+        color: var(--look-color-error);
         font-weight: bold;
     }
 }

@@ -1,0 +1,107 @@
+@use "sass:color";
+@use "variables" as *;
+
+$look-theme-light: (
+    "error": $look-color-error,
+    "text": $look-color-text,
+    "background": $look-color-background,
+    "heading": $look-color-heading,
+    "link": $look-color-link,
+    "link-hover": $look-color-link-hover,
+    "marker": $look-color-marker,
+    "button": $look-color-button,
+    "button-background": $look-color-button-background,
+    "button-icon": color.adjust($look-color-button-background, $lightness: -20%),
+    "button-hover": color.adjust(
+            $look-color-button-background,
+            $lightness: -10%
+        ),
+    "button-empty-icon": color.adjust(
+            $look-color-button-background,
+            $lightness: -20%
+        ),
+    "button-empty-hover": color.adjust($look-color-background, $lightness: -5%),
+    "code": $look-color-code,
+    "code-background": $look-color-code-background,
+    "selection": $look-color-selection,
+    "selection-background": $look-color-selection-background,
+    "cube-left": $look-color-cube-left,
+    "cube-right": $look-color-cube-right,
+    "cube-top": $look-color-cube-top,
+    "cube-icon-background": rgba($look-color-cube-icon-background, 0.6),
+    "balloon": $look-color-balloon,
+    "fieldset": $look-color-fieldset,
+    "fieldset-border": $look-color-fieldset-border,
+    "form-border": $look-color-form-border,
+    "form-hint": $look-color-form-hint,
+    "form-focus": $look-color-form-focus,
+    "segment-border": $look-color-segment-border,
+    "segment-background": $look-color-segment-background,
+);
+
+$look-theme-dark: (
+    "error": $look-color-error-dark,
+    "text": $look-color-text-dark,
+    "background": $look-color-background-dark,
+    "heading": $look-color-heading-dark,
+    "link": $look-color-link-dark,
+    "link-hover": $look-color-link-hover-dark,
+    "marker": $look-color-marker-dark,
+    "button": $look-color-button-dark,
+    "button-background": $look-color-button-background-dark,
+    "button-icon": color.adjust(
+            $look-color-button-background-dark,
+            $lightness: -35%
+        ),
+    "button-hover": color.adjust(
+            $look-color-button-background-dark,
+            $lightness: -10%
+        ),
+    "button-empty-icon": color.adjust(
+            $look-color-button-background-dark,
+            $lightness: 15%
+        ),
+    "button-empty-hover": color.adjust(
+            $look-color-background-dark,
+            $lightness: -5%
+        ),
+    "code": $look-color-code-dark,
+    "code-background": $look-color-code-background-dark,
+    "selection": $look-color-selection-dark,
+    "selection-background": $look-color-selection-background-dark,
+    "cube-left": $look-color-cube-left-dark,
+    "cube-right": $look-color-cube-right-dark,
+    "cube-top": $look-color-cube-top-dark,
+    "cube-icon-background": rgba($look-color-cube-icon-background-dark, 0.6),
+    "balloon": $look-color-balloon-dark,
+    "fieldset": $look-color-fieldset-dark,
+    "fieldset-border": $look-color-fieldset-border-dark,
+    "form-border": $look-color-form-border-dark,
+    "form-hint": $look-color-form-hint-dark,
+    "form-focus": $look-color-form-focus-dark,
+    "segment-border": $look-color-segment-border-dark,
+    "segment-background": $look-color-segment-background-dark,
+);
+
+@mixin colors($theme, $color-scheme) {
+    color-scheme: $color-scheme;
+
+    @each $name, $value in $theme {
+        --look-color-#{$name}: #{$value};
+    }
+}
+
+:root,
+.#{$look-theme-light-class} {
+    @include colors($look-theme-light, light);
+}
+
+.#{$look-theme-dark-class} {
+    @include colors($look-theme-dark, dark);
+}
+
+.#{$look-theme-light-class},
+.#{$look-theme-dark-class} {
+    background-color: var(--look-color-background);
+    color: var(--look-color-text);
+}

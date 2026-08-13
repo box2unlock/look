@@ -1,41 +1,41 @@
-.look-fieldset
-{
-    @include rem(margin-top, $look-unit);
-    @include rem(margin-bottom, $look-unit);
-    @include rem(padding, $look-unit - 1px $look-unit);
-    @include rem(border-radius, $look-border-radius);
-    @include rem(border, 1px solid $look-color-fieldset-border);
-    position: relative;
+@use "sass:math";
+@use "@pierreburel/sass-rem" as rem;
+@use "../tools" as *;
+@use "../variables" as *;
 
-    > .legend
-    {
+.look-fieldset {
+    position: relative;
+    min-width: 0;
+    margin-top: rem.convert($look-spacer);
+    margin-right: 0;
+    margin-bottom: rem.convert($look-spacer);
+    margin-left: 0;
+    padding: rem.convert($look-spacer - 1px $look-spacer);
+    border: 1px solid var(--look-color-fieldset-border);
+    border-radius: rem.convert($look-border-radius);
+
+    > .legend {
         display: block;
         position: absolute;
-        @include rem(top, -10px);
+        top: rem.convert(-1 * math.div($look-spacer + 1px, 2));
         left: 0;
         width: 100%;
-        @include rem(font-size, 12px);
-        line-height: $look-unit / 12px;
-        color: $look-color-fieldset;
-        text-transform: uppercase;
+        color: var(--look-color-fieldset);
+        font-size: rem.convert(14px);
+        line-height: calc($look-spacer / 14px);
         text-align: center;
-        @include rem(letter-spacing, 2px);
+        text-transform: uppercase;
 
-        span
-        {
+        span {
             display: inline-block;
-            background: $look-color-background;
-            @include rem(padding, 0 $look-unit/2);
+            padding: rem.convert(0 $look-spacer-2);
+            background: var(--look-color-background);
         }
     }
 
-    > *:nth-child(2)
-    {
+    > .legend + * {
         margin-top: 0;
     }
 
-    > *:last-child
-    {
-        margin-bottom: 0;
-    }
+    @include remove-margin;
 }

@@ -1,0 +1,161 @@
+@use "sass:color";
+@use "sass:math";
+@use "palette" as *;
+
+$look-icon-font-path: "fonts" !default;
+
+$look-icon: ":is(.fa, .fas, .far, .fab, .fa-solid, .fa-regular, .fa-brands)" !default;
+
+$look-font-family:
+    "Inter",
+    "Inter Variable",
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial,
+    sans-serif !default;
+$look-font-size: 16px !default;
+
+$look-line-height: 1.5 !default;
+
+$look-spacer: math.round($look-line-height * $look-font-size) !default;
+$look-spacer-2: math.round(math.div($look-spacer, 2)) !default;
+$look-spacer-4: math.round(math.div($look-spacer, 4)) !default;
+$look-spacer-6: math.round(math.div($look-spacer, 6)) !default;
+
+$look-font-size-h1: 44px !default;
+$look-font-size-h2: 38px !default;
+$look-font-size-h3: 32px !default;
+$look-font-size-h4: 22px !default;
+$look-font-size-h5: 19px !default;
+$look-font-size-h6: $look-font-size !default;
+
+$look-border-radius: $look-spacer-6 !default;
+
+$look-theme-light-class: "light" !default;
+$look-theme-dark-class: "dark" !default;
+
+$look-color-contrast-dark: palette(Black) !default;
+$look-color-contrast-light: palette(White) !default;
+
+$look-colors: (
+    "red": palette(Red),
+    "pink": palette(Pink),
+    "purple": palette(Purple),
+    "deeppurple": palette(Deep Purple),
+    "indigo": palette(Indigo),
+    "blue": palette(Blue),
+    "lightblue": palette(Light Blue),
+    "cyan": palette(Cyan),
+    "teal": palette(Teal),
+    "green": palette(Green),
+    "lightgreen": palette(Light Green),
+    "lime": palette(Lime),
+    "yellow": palette(Yellow),
+    "amber": palette(Amber),
+    "orange": palette(Orange),
+    "deeporange": palette(Deep Orange),
+    "brown": palette(Brown),
+    "grey": palette(Grey),
+    "bluegrey": palette(Blue Grey),
+    "black": palette(Black),
+    "white": palette(White),
+) !default;
+
+$look-color-error: palette(Pink, A400) !default;
+$look-color-error-dark: palette(Pink, A400) !default;
+
+$look-color-success: palette(Green, A400) !default;
+$look-color-success-dark: palette(Green, A400) !default;
+
+$look-color-text: palette(Grey, 800) !default;
+$look-color-text-dark: palette(Grey, 400) !default;
+
+$look-color-background: palette(White) !default;
+$look-color-background-dark: palette(Grey, 900) !default;
+
+$look-color-link: palette(Cyan, 700) !default;
+$look-color-link-dark: palette(Cyan, 300) !default;
+
+$look-color-link-hover: color.adjust(
+    $look-color-link,
+    $lightness: 10%
+) !default;
+$look-color-link-hover-dark: color.adjust(
+    $look-color-link-dark,
+    $lightness: 10%
+) !default;
+
+$look-color-marker: color.adjust($look-color-link, $lightness: -10%) !default;
+$look-color-marker-dark: color.adjust(
+    $look-color-link-dark,
+    $lightness: -30%
+) !default;
+
+$look-color-heading: palette(Grey, 900) !default;
+$look-color-heading-dark: palette(White) !default;
+
+$look-color-button: $look-color-background !default;
+$look-color-button-dark: $look-color-background-dark !default;
+
+$look-color-button-background: $look-color-link !default;
+$look-color-button-background-dark: $look-color-link-dark !default;
+
+$look-color-code: $look-color-text !default;
+$look-color-code-dark: $look-color-text-dark !default;
+
+$look-color-code-background: palette(Grey, 100) !default;
+$look-color-code-background-dark: palette(Black) !default;
+
+$look-color-selection: inherit !default;
+$look-color-selection-dark: $look-color-text !default;
+
+$look-color-selection-background: palette(Yellow) !default;
+$look-color-selection-background-dark: $look-color-selection-background !default;
+
+$look-color-cube-left: palette(Grey, 600) !default;
+$look-color-cube-left-dark: palette(Grey, 800) !default;
+
+$look-color-cube-right: palette(Grey, 400) !default;
+$look-color-cube-right-dark: palette(Grey, 600) !default;
+
+$look-color-cube-top: palette(Grey, 300) !default;
+$look-color-cube-top-dark: palette(Grey, 500) !default;
+
+$look-color-cube-icon-background: $look-color-background !default;
+$look-color-cube-icon-background-dark: $look-color-background-dark !default;
+
+$look-color-balloon: palette(Grey, 100) !default;
+$look-color-balloon-dark: palette(Grey, 800) !default;
+
+$look-color-fieldset-border: palette(Grey, 400) !default;
+$look-color-fieldset-border-dark: palette(Grey, 800) !default;
+
+$look-color-fieldset: color.adjust(
+    $look-color-fieldset-border,
+    $lightness: -20%
+) !default;
+$look-color-fieldset-dark: color.adjust(
+    $look-color-fieldset-border-dark,
+    $lightness: 20%
+) !default;
+
+$look-color-form-border: palette(Grey, 300) !default;
+$look-color-form-border-dark: palette(Grey, 300) !default;
+
+$look-color-form-hint: palette(Grey, 600) !default;
+$look-color-form-hint-dark: palette(Grey, 600) !default;
+
+$look-color-form-focus: $look-color-link !default;
+$look-color-form-focus-dark: $look-color-link-dark !default;
+
+$look-color-segment-border: $look-color-form-border !default;
+$look-color-segment-border-dark: $look-color-fieldset-border-dark !default;
+
+$look-color-segment-background: $look-color-code-background !default;
+$look-color-segment-background-dark: color.adjust(
+    $look-color-background-dark,
+    $lightness: -5%
+) !default;

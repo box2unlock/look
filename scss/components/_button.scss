@@ -1,97 +1,87 @@
-.look-button
-{
-    display: inline-block;
-    background: $look-color-button-background;
-    color: $look-color-button;
-    font-weight: bold;
+@use "sass:color";
+@use "@pierreburel/sass-rem" as rem;
+@use "../palette" as *;
+@use "../tools" as *;
+@use "../variables" as *;
+
+.look-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: rem.convert($look-spacer-2 $look-spacer);
+    gap: rem.convert($look-spacer-2);
     border: 0;
-    @include rem(border-radius, $look-border-radius);
-    cursor: pointer;
-    @include rem(padding, $look-unit/2 $look-unit);
-    text-transform: uppercase;
+    border-radius: rem.convert($look-border-radius);
+    background: var(--look-color-button-background);
+    color: var(--look-color-button);
+    font-weight: bold;
+    line-height: inherit;
     text-align: center;
     vertical-align: middle;
     white-space: nowrap;
-    line-height: inherit;
+    cursor: pointer;
+    transition: transform 0.05s ease;
 
-    &:hover
-    {
-        color: $look-color-button;
-        background: darken($look-color-button-background, 10%);
+    #{$look-icon} {
+        color: var(--look-color-button-icon);
     }
 
-    &.-empty
-    {
+    &:hover {
+        background: var(--look-color-button-hover);
+        color: var(--look-color-button);
+    }
+
+    &:active {
+        transform: translateY(rem.convert(2px));
+    }
+
+    &.-empty {
         background: transparent;
-        color: $look-color-button-background;
+        color: var(--look-color-button-background);
 
-        &:hover
-        {
-            background: darken($look-color-background, 5%);
-            color: darken($look-color-button-background, 10%);
+        #{$look-icon} {
+            color: var(--look-color-button-empty-icon);
+        }
+
+        &:hover {
+            background: var(--look-color-button-empty-hover);
+            color: var(--look-color-button-hover);
         }
     }
 
-    &.-small
-    {
-        @include rem(padding, $look-unit/4 $look-unit/2);
+    &.-small {
+        padding: rem.convert($look-spacer-4 $look-spacer-2);
+        gap: rem.convert($look-spacer-4);
+        font-size: rem.convert(14px);
+        line-height: calc($look-spacer / 14px);
     }
 
-    &.-wide
-    {
-        display: block;
+    &.-wide {
+        display: flex;
         width: 100%;
-    }
-
-    &.-icon
-    {
-        .fa
-        {
-            @include rem(margin, 0 $look-unit);
-            color: darken($look-color-button-background, 20%);
-        }
-
-        &.-small .fa
-        {
-            @include rem(margin, 0 $look-unit/2);
-        }
-
-        .fa:first-child
-        {
-            margin-left: 0;
-        }
-
-        .fa:last-child
-        {
-            margin-right: 0;
-        }
     }
 }
 
-@each $cl, $color in $look-colors
-{
-    .look-button.-#{$cl}
-    {
+@each $cl, $color in $look-colors {
+    .look-button.-#{$cl} {
         background: $color;
         color: contrast-color($color);
 
-        .fa
-        {
-            @if $cl == 'black' {
-                color: palette(White, 500);
-            } @else if $cl == 'white' {
-                color: palette(Black, 500);
+        #{$look-icon} {
+            @if $cl == "black" {
+                color: palette(White);
+            } @else if $cl == "white" {
+                color: palette(Black);
             } @else {
-                color: darken($color, 20%);
+                color: color.adjust($color, $lightness: -20%);
             }
         }
 
-        &:hover
-        {
-            @if $cl == 'black' {
-                background: lighten(palette(Black, 500), 20%);
+        &:hover {
+            @if $cl == "black" {
+                background: color.adjust(palette(Black), $lightness: 20%);
             } @else {
-                background: darken($color, 10%);
+                background: color.adjust($color, $lightness: -10%);
             }
         }
     }

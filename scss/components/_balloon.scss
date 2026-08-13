@@ -1,41 +1,43 @@
-.look-balloon
-{
+@use "@pierreburel/sass-rem" as rem;
+@use "../tools" as *;
+@use "../variables" as *;
+
+.look-balloon {
     position: relative;
-    background: $look-color-balloon;
-    @include rem(border-radius, $look-border-radius);
+    margin-top: rem.convert($look-spacer);
+    margin-bottom: rem.convert($look-spacer);
+    margin-left: rem.convert($look-spacer);
+    padding: rem.convert($look-spacer);
+    border-radius: rem.convert($look-border-radius);
     border-top-left-radius: 0;
-    @include rem(padding, $look-unit);
-    @include rem(margin-left, $look-unit);
-    @include rem(margin-top, $look-unit);
-    @include rem(margin-bottom, $look-unit);
+    background: var(--look-color-balloon);
 
-    &.-topright
-    {
-        @include rem(border-radius, $look-border-radius);
-        border-top-right-radius: 0;
-        @include rem(margin-right, $look-unit);
-        margin-left: 0;
-
-        &:before
-        {
-            left: auto;
-            right: -$look-unit;
-            border-width: $look-unit $look-unit 0 0;
-            border-color: $look-color-balloon transparent transparent transparent;
-        }
-    }
-
-    &:before
-    {
+    &::before {
         position: absolute;
         top: 0;
-        left: -$look-unit;
-        content: '';
+        left: rem.convert(-1 * $look-spacer);
         width: 0;
         height: 0;
+        border-width: rem.convert(0 $look-spacer $look-spacer 0);
         border-style: solid;
-        @include rem(border-width, 0 $look-unit $look-unit 0);
-        border-color: transparent $look-color-balloon transparent transparent;
+        border-color: transparent var(--look-color-balloon) transparent
+            transparent;
+        content: "";
+    }
+
+    &.-topright {
+        margin-right: rem.convert($look-spacer);
+        margin-left: 0;
+        border-top-right-radius: 0;
+        border-top-left-radius: rem.convert($look-border-radius);
+
+        &::before {
+            right: rem.convert(-1 * $look-spacer);
+            left: auto;
+            border-width: rem.convert($look-spacer $look-spacer 0 0);
+            border-color: var(--look-color-balloon) transparent transparent
+                transparent;
+        }
     }
 
     @include remove-margin;

@@ -1,52 +1,50 @@
-.look-comment
-{
-    @include rem(margin-top, $look-unit);
-    @include rem(margin-bottom, $look-unit);
-    @include rem(padding-left, 2*$look-unit + $look-unit/2);
+@use "@pierreburel/sass-rem" as rem;
+@use "../variables" as *;
+
+$look-comment-avatar-size: 2 * $look-spacer;
+$look-comment-indent: $look-comment-avatar-size + $look-spacer-2;
+
+.look-comment {
     position: relative;
+    margin-top: rem.convert($look-spacer);
+    margin-bottom: rem.convert($look-spacer);
+    padding-left: rem.convert($look-comment-indent);
 
-    &.-topright
-    {
-        padding-left: 0;
-        @include rem(padding-right, 2*$look-unit + $look-unit/2);
-
-        > .header
-        {
-            text-align: right;
-        }
-
-        > .avatar
-        {
-            left: auto;
-            right: 0;
-        }
-    }
-
-    > .header
-    {
-        @include rem(font-size, 13px);
-        line-height: $look-unit / 13px;
-    }
-
-    > .avatar
-    {
+    > .avatar {
         position: absolute;
         top: 0;
         left: 0;
-        width: 2*$look-unit;
-        height: 2*$look-unit;
+        width: rem.convert($look-comment-avatar-size);
+        height: rem.convert($look-comment-avatar-size);
         overflow: hidden;
 
         a,
-        img
-        {
+        img {
             display: block;
         }
     }
 
-    .look-balloon
-    {
+    > .header {
+        font-size: rem.convert(13px);
+        line-height: calc($look-spacer / 13px);
+    }
+
+    .look-balloon {
         margin-top: 0;
         margin-bottom: 0;
+    }
+
+    &.-topright {
+        padding-right: rem.convert($look-comment-indent);
+        padding-left: 0;
+
+        > .avatar {
+            right: 0;
+            left: auto;
+        }
+
+        > .header {
+            text-align: right;
+        }
     }
 }

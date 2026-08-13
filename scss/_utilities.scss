@@ -1,102 +1,85 @@
-._grayscale
-{
+@use "@pierreburel/sass-rem" as rem;
+@use "variables" as *;
+
+._grayscale {
     -webkit-filter: grayscale(100%) !important;
     filter: grayscale(100%) !important;
 }
 
-._border-radius
-{
+._border-radius {
     border-radius: $look-border-radius !important;
 }
 
-._text-left
-{
+._text-start {
     text-align: left !important;
 }
 
-._text-right
-{
+._text-end {
     text-align: right !important;
 }
 
-._text-center
-{
+._text-center {
     text-align: center !important;
 }
 
-._text-lowercase
-{
+._text-lowercase {
     text-transform: lowercase !important;
 }
 
-._text-uppercase
-{
+._text-uppercase {
     text-transform: uppercase !important;
 }
 
-._text-capitalize
-{
+._text-capitalize {
     text-transform: capitalize !important;
 }
 
-._float-left
-{
+._float-start {
     float: left !important;
 }
 
-._float-right
-{
+._float-end {
     float: right !important;
 }
 
-._margin-reset
-{
+._margin-0 {
     margin: 0 !important;
 }
 
-._margin-default
-{
-    @include rem(margin, $look-unit !important);
+._margin {
+    margin: rem.convert($look-spacer !important);
 }
 
-._margin-default-x
-{
-    @include rem(margin-left, $look-unit !important);
-    @include rem(margin-right, $look-unit !important);
+._margin-x {
+    margin-right: rem.convert($look-spacer !important);
+    margin-left: rem.convert($look-spacer !important);
 }
 
-._margin-default-y
-{
-    @include rem(margin-top, $look-unit !important);
-    @include rem(margin-bottom, $look-unit !important);
+._margin-y {
+    margin-top: rem.convert($look-spacer !important);
+    margin-bottom: rem.convert($look-spacer !important);
 }
 
-._padding-reset
-{
+._padding-0 {
     padding: 0 !important;
 }
 
-._padding-default
-{
-    @include rem(padding, $look-unit !important);
+._padding {
+    padding: rem.convert($look-spacer !important);
 }
 
-._padding-default-x
-{
-    @include rem(padding-left, $look-unit !important);
-    @include rem(padding-right, $look-unit !important);
+._padding-x {
+    padding-right: rem.convert($look-spacer !important);
+    padding-left: rem.convert($look-spacer !important);
 }
 
-._padding-default-y
-{
-    @include rem(padding-top, $look-unit !important);
-    @include rem(padding-bottom, $look-unit !important);
+._padding-y {
+    padding-top: rem.convert($look-spacer !important);
+    padding-bottom: rem.convert($look-spacer !important);
 }
 
-@each $cl, $color in $look-colors
-{
-    ._color-#{$cl}
-    {
+@each $cl, $color in $look-colors {
+    ._color-#{$cl} {
         color: $color !important;
     }
 }

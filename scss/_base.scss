@@ -1,174 +1,178 @@
-body
-{
-    font-family: $look-font-family;
-    @include rem(font-size, $look-font-size);
-    line-height: $look-line-height;
-    color: $look-color-text;
-    background-color: $look-color-background;
+@use "@pierreburel/sass-rem" as rem;
+@use "variables" as *;
+
+:root {
+    --look-spacer: #{rem.convert($look-spacer)};
+    --look-spacer-2: #{rem.convert($look-spacer-2)};
+    --look-spacer-4: #{rem.convert($look-spacer-4)};
 }
 
-a
-{
-    text-decoration: none;
-    color: $look-color-link;
-    font-weight: bold;
+::selection {
+    background: var(--look-color-selection-background);
+    color: var(--look-color-selection);
+}
 
-    &:hover
-    {
-        color: lighten($look-color-link, 10%);
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background-color: var(--look-color-background);
+    color: var(--look-color-text);
+    font-size: rem.convert($look-font-size);
+    line-height: $look-line-height;
+    font-family: $look-font-family;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    margin-top: rem.convert($look-spacer);
+    margin-bottom: rem.convert($look-spacer);
+    color: var(--look-color-heading);
+}
+
+h1,
+.h1 {
+    font-size: rem.convert($look-font-size-h1);
+    line-height: calc(2 * $look-spacer / $look-font-size-h1);
+    letter-spacing: -0.04em;
+}
+
+h2,
+.h2 {
+    font-size: rem.convert($look-font-size-h2);
+    line-height: calc(2 * $look-spacer / $look-font-size-h2);
+    letter-spacing: -0.035em;
+}
+
+h3,
+.h3 {
+    font-size: rem.convert($look-font-size-h3);
+    line-height: calc(2 * $look-spacer / $look-font-size-h3);
+    letter-spacing: -0.03em;
+}
+
+h4,
+.h4 {
+    font-size: rem.convert($look-font-size-h4);
+    line-height: calc($look-spacer / $look-font-size-h4);
+    letter-spacing: -0.025em;
+}
+
+h5,
+.h5 {
+    font-size: rem.convert($look-font-size-h5);
+    line-height: calc($look-spacer / $look-font-size-h5);
+    letter-spacing: -0.02em;
+}
+
+h6,
+.h6 {
+    font-size: rem.convert($look-font-size-h6);
+    line-height: calc($look-spacer / $look-font-size-h6);
+    letter-spacing: -0.015em;
+}
+
+a {
+    color: var(--look-color-link);
+    font-weight: bold;
+    text-decoration: none;
+
+    &:hover {
+        color: var(--look-color-link-hover);
     }
 }
 
-h1, h2, h3, h4, h5, h6
-{
-    @include rem(margin-top, $look-unit);
-    @include rem(margin-bottom, $look-unit);
-    color: $look-color-heading;
-}
-
-h1
-{
-    @include rem(font-size, $look-font-size-h1);
-    line-height: 2 * $look-unit / $look-font-size-h1;
-    @include rem(letter-spacing, -3px);
-}
-
-h2
-{
-    @include rem(font-size, $look-font-size-h2);
-    line-height: 2 * $look-unit / $look-font-size-h2 + 0.0000001;
-    @include rem(letter-spacing, -3px);
-}
-
-h3
-{
-    @include rem(font-size, $look-font-size-h3);
-    line-height: 2 * $look-unit / $look-font-size-h3;
-    @include rem(letter-spacing, -2px);
-}
-
-h4
-{
-    @include rem(font-size, $look-font-size-h4);
-    line-height: $look-unit / $look-font-size-h4;
-    @include rem(letter-spacing, -1px);
-}
-
-h5
-{
-    @include rem(font-size, $look-font-size-h5);
-    line-height: $look-unit / $look-font-size-h5;
-    @include rem(letter-spacing, -1px);
-}
-
-h6
-{
-    @include rem(font-size, $look-font-size-h6);
-    line-height: $look-unit / $look-font-size-h6;
-    @include rem(letter-spacing, -0.5px);
-}
-
-ul
-{
+ul {
     list-style-type: square;
 }
 
-ul, ol, dl,
+ul,
+ol,
+dl,
 p,
-pre
-{
-    @include rem(margin-top, $look-unit);
-    @include rem(margin-bottom, $look-unit);
+pre {
+    margin-top: rem.convert($look-spacer);
+    margin-bottom: rem.convert($look-spacer);
 }
 
 li ol,
-li ul
-{
+li ul {
     margin-top: 0;
     margin-bottom: 0;
 }
 
-ul > li
-{
-    list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAGCAYAAADkOT91AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAB9JREFUeNpiZJi+/D8DEmBiQAOEBRj///+PXwVAgAEAP4YFRZMhCHAAAAAASUVORK5CYII);
+ul > li::marker {
+    color: var(--look-color-marker);
 }
 
-ol > li
-{
-    list-style-image: none;
-}
-
-dl
-{
-    dd
-    {
+dl {
+    dd {
         font-weight: bold;
     }
 
-    &.-inline
-    {
+    &.-inline {
         dt,
-        dd
-        {
+        dd {
             display: inline-block;
         }
 
-        dd
-        {
-            margin-left: $look-unit / 4;
-            margin-right: $look-unit;
+        dd {
+            margin-right: rem.convert($look-spacer);
+            margin-left: rem.convert($look-spacer-4);
         }
     }
 }
 
+img {
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+label {
+    cursor: pointer;
+}
+
 pre,
-code
-{
-    font-family: Consolas;
+code {
+    font-family: Consolas, sans-serif;
 }
 
-pre
-{
-    color: $look-color-code;
+pre {
+    color: var(--look-color-code);
     white-space: pre-wrap;
-    white-space: -moz-pre-wrap;
-    white-space: -pre-wrap;
-    white-space: -o-pre-wrap;
     word-wrap: break-word;
-    background: $look-color-code-background;
+    padding: $look-spacer;
     border-radius: $look-border-radius;
-    padding: $look-unit;
+    background: var(--look-color-code-background);
 }
 
-// inline code
-code
-{
-    color: $look-color-code;
-    @include rem(padding, 2px 4px);
+code {
+    padding: rem.convert(2px 4px);
     border-radius: $look-border-radius;
-    background: $look-color-code-background;
-    @include rem(font-size, 12px);
+    background: var(--look-color-code-background);
+    color: var(--look-color-code);
+    font-size: rem.convert(14px);
 }
 
-// blocks of code
-pre code
-{
-    color: inherit;
+pre code {
     padding: 0;
     border-radius: 0;
     background: transparent;
-    @include rem(font-size, $look-font-size);
+    color: inherit;
+    font-size: rem.convert($look-font-size);
     line-height: $look-line-height;
-}
-
-img
-{
-    vertical-align: middle;
-    max-width: 100%;
-    height: auto;
-}
-
-label
-{
-    cursor: pointer;
 }

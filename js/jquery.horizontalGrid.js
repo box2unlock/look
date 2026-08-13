@@ -6,12 +6,12 @@
 
         var settings = $.extend({
             color: '#ccc',
-            height: 20,
+            height: 24,
             document: document,
             appendTo: 'body'
         }, options);
 
-        $(window).load(function () {
+        $(window).on('load', function () {
 
             var documentHeight = $(settings.document).height();
             var horizontalGridHeight = 0;
@@ -25,7 +25,7 @@
 
             var horizontalGrid = $(html);
 
-            var toggleLink = $('<a href="#" class="look-button -small">Toggle horizontal grid</a>');
+            var toggleLink = $('<a href="#" class="look-button -small"><i aria-hidden="true" class="fa-solid fa-grip-lines"></i>Toggle horizontal grid</a>');
             toggleLink.click(function () {
                 horizontalGrid.toggle();
                 return false;
