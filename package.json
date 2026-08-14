@@ -1,6 +1,6 @@
 {
     "name": "@box2unlock/look",
-    "version": "0.9.0",
+    "version": "1.0.0",
     "description": "Minimalistic CSS framework",
     "keywords": [
         "css",
@@ -12,12 +12,28 @@
         "look"
     ],
     "homepage": "https://github.com/box2unlock/look",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/box2unlock/look.git"
+    },
+    "bugs": {
+        "url": "https://github.com/box2unlock/look/issues"
+    },
     "author": {
         "name": "grzesw",
         "url": "https://github.com/grzesw",
         "email": "box2unlock@xml.ovh"
     },
     "license": "MIT",
+    "main": "dist/look.css",
+    "style": "dist/look.css",
+    "sass": "scss/look.scss",
+    "files": [
+        "dist",
+        "scss",
+        "README.md",
+        "LICENSE"
+    ],
     "scripts": {
         "build": "npm run css",
         "css": "npm run css:compile && npm run css:minify && npm run css:fonts",
@@ -30,12 +46,12 @@
     },
     "devDependencies": {
         "prettier": "3.9.6",
-        "prettier-plugin-css-order": "2.2.0"
+        "prettier-plugin-css-order": "2.2.0",
+        "sass": "1.102.0"
     },
     "dependencies": {
         "@fortawesome/fontawesome-free": "7.3.1",
         "@pierreburel/sass-rem": "4.1.0",
-        "modern-normalize": "3.0.1",
-        "sass": "1.102.0"
+        "modern-normalize": "3.0.1"
     }
 }
