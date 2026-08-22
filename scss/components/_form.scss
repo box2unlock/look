@@ -1,7 +1,17 @@
+@use "sass:math";
 @use "@pierreburel/sass-rem" as rem;
 @use "../variables" as *;
 
 $look-form-field-padding: $look-spacer-2 - 1px;
+
+$look-form-hint-font-size: 14px;
+
+$look-form-hint-line-height: $look-spacer - $look-spacer-4;
+
+$look-form-hint-padding: math.div(
+    $look-spacer - $look-form-hint-line-height,
+    2
+);
 
 $look-form-arrow-size: 5px;
 
@@ -97,10 +107,20 @@ $look-form-select-padding-right: $look-spacer-2 + 2 * $look-form-arrow-size +
         }
     }
 
+    /**
+     * A full spacer of leading is too airy once a long hint wraps, so the lines
+     * sit three quarters of a spacer apart and the block padding tops the first
+     * and last line back up to a full spacer - a single-line hint occupies
+     * exactly one spacer, as before, and keeps the vertical rhythm.
+     */
     .hint {
+        padding-top: rem.convert($look-form-hint-padding);
+        padding-bottom: rem.convert($look-form-hint-padding);
         color: var(--look-color-form-hint);
-        font-size: rem.convert(14px);
-        line-height: calc($look-spacer / 14px);
+        font-size: rem.convert($look-form-hint-font-size);
+        line-height: calc(
+            $look-form-hint-line-height / $look-form-hint-font-size
+        );
     }
 
     .error {

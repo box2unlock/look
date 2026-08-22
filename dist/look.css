@@ -12396,10 +12396,20 @@ pre code {
 .look-form.-file .file {
   line-height: 3;
 }
+.look-form {
+  /**
+   * A full spacer of leading is too airy once a long hint wraps, so the lines
+   * sit three quarters of a spacer apart and the block padding tops the first
+   * and last line back up to a full spacer - a single-line hint occupies
+   * exactly one spacer, as before, and keeps the vertical rhythm.
+   */
+}
 .look-form .hint {
+  padding-top: 0.1875rem;
+  padding-bottom: 0.1875rem;
   color: var(--look-color-form-hint);
   font-size: 0.875rem;
-  line-height: 1.7142857143;
+  line-height: 1.2857142857;
 }
 .look-form .error {
   color: var(--look-color-error);
