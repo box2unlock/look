@@ -103,6 +103,42 @@ $look-color-button-dark: $look-color-background-dark !default;
 $look-color-button-background: $look-color-link !default;
 $look-color-button-background-dark: $look-color-link-dark !default;
 
+$look-color-button-hover: color.adjust(
+    $look-color-button-background,
+    $lightness: -10%
+) !default;
+$look-color-button-hover-dark: color.adjust(
+    $look-color-button-background-dark,
+    $lightness: -10%
+) !default;
+
+$look-color-button-icon: color.adjust(
+    $look-color-button-background,
+    $lightness: -20%
+) !default;
+$look-color-button-icon-dark: color.adjust(
+    $look-color-button-background-dark,
+    $lightness: -35%
+) !default;
+
+$look-color-button-empty-hover: color.adjust(
+    $look-color-background,
+    $lightness: -5%
+) !default;
+$look-color-button-empty-hover-dark: color.adjust(
+    $look-color-background-dark,
+    $lightness: -5%
+) !default;
+
+$look-color-button-empty-icon: color.adjust(
+    $look-color-button-background,
+    $lightness: -20%
+) !default;
+$look-color-button-empty-icon-dark: color.adjust(
+    $look-color-button-background-dark,
+    $lightness: 15%
+) !default;
+
 $look-color-code: $look-color-text !default;
 $look-color-code-dark: $look-color-text-dark !default;
 
@@ -124,8 +160,11 @@ $look-color-cube-right-dark: palette(Grey, 600) !default;
 $look-color-cube-top: palette(Grey, 300) !default;
 $look-color-cube-top-dark: palette(Grey, 500) !default;
 
-$look-color-cube-icon-background: $look-color-background !default;
-$look-color-cube-icon-background-dark: $look-color-background-dark !default;
+$look-color-cube-icon-background: rgba($look-color-background, 0.6) !default;
+$look-color-cube-icon-background-dark: rgba(
+    $look-color-background-dark,
+    0.6
+) !default;
 
 $look-color-balloon: palette(Grey, 100) !default;
 $look-color-balloon-dark: palette(Grey, 800) !default;
